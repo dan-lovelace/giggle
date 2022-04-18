@@ -37,7 +37,7 @@ Giggle is self-hosted meaning you may host it any way you like or just run it lo
 
 - Open a new Terminal window
 - Clone this repository with `git clone https://github.com/dan-lovelace/giggle.git`
-- Change into the new directory with something like `cd my-cse`
+- Change into the new directory with something like `cd giggle`
 - Create an empty `.env` file with `touch .env`
 - Open the `.env` file and paste in the following template, then update the values with your own:
 
@@ -67,15 +67,16 @@ Run `yarn dev` to get started using the dev server.
 
 ## Testing
 
-Giggle's tests are written using Cypress and can be run with either of these commands:
+Giggle's tests are written using [Cypress](https://www.cypress.io/) and can be run with either of these commands:
 
 - `yarn cypress:open` - Opens a Cypress runner for testing individual spec files.
 - `yarn cypress:run` - Executes all tests in series.
 
 ## Contribution
 
-If you'd like to contribute, feel free to open a PR any time. Please abide by these guidelines:
+If you'd like to contribute, feel free to [open a PR](https://github.com/dan-lovelace/giggle/compare) any time. Please abide by these guidelines:
 
+- Add new tests as necessary
 - Make sure the tests pass with `yarn cypress:run`
 - Include a description about the changes and why you think they're necessary
 
