@@ -55,7 +55,7 @@ GOOGLE_API_KEY=your_api_key
 
 ## Troubleshooting
 
-- If you made a new Google account, it's possible the first couple login attempts by Giggle will fail due to being prompted to confirm a phone number. Try refreshing the page. You may also check the Puppeteer output in `puppeteer/screenshots` for any insight. If you continue having trouble, try increasing the `waitForTimeout` values in [/pages/api/engines.ts](https://github.com/dan-lovelace/giggle/blob/main/pages/api/engines.ts) from `500` to `1000` and rebuilding.
+- If you made a new Google account, it's possible the first couple login attempts by Giggle will fail due to being prompted to confirm a phone number. Try refreshing the page. You may also check the Puppeteer output in `puppeteer/screenshots` for any insight. If you continue having trouble, try increasing the `waitForTimeout` values in [pages/api/engines.ts](https://github.com/dan-lovelace/giggle/blob/main/pages/api/engines.ts) from `500` to `1000` and rebuilding.
 - If you see an error saying something like "No engines found," make sure at least one search engine exists in your [Programmable Search Engine console](https://programmablesearchengine.google.com/smart_sign_in).
 - Feel free to open a [GitHub issue](https://github.com/dan-lovelace/giggle/issues) if you need additional help.
 
@@ -63,7 +63,7 @@ GOOGLE_API_KEY=your_api_key
 
 Run `yarn dev` to get started using the dev server.
 
-**Note**: `yarn dev` starts a local instance _without_ API caching which may run up your search request limits rather quickly. There is some mock implementation in [/pages/api/search.ts](https://github.com/dan-lovelace/giggle/blob/main/pages/api/search.ts) which will avoid hitting your engine's API during development. Uncomment the `MOCK USAGE` section and comment the `REAL USAGE` to use it. Mocking the search API uses the JSON located in [mocks/results-recipes.json](https://github.com/dan-lovelace/giggle/blob/main/mocks/results-recipes.json).
+**Note**: `yarn dev` starts a local instance _without_ API caching which may run up your search request limits rather quickly. There is some mock implementation in [pages/api/search.ts](https://github.com/dan-lovelace/giggle/blob/main/pages/api/search.ts) which will avoid hitting your engine's API during development. Uncomment the `MOCK USAGE` section and comment the `REAL USAGE` to use it. Mocking the search API uses the JSON located in [mocks/results-recipes.json](https://github.com/dan-lovelace/giggle/blob/main/mocks/results-recipes.json).
 
 ## Testing
 

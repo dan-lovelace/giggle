@@ -69,7 +69,8 @@ export default async function handler(
   };
 
   const cacheMaxAge = config.resultsCacheLengthSeconds || "3600";
-  console.log("cacheMaxAge", cacheMaxAge);
+  console.log("Search cache age:", cacheMaxAge);
+
   res
     .status(200)
     .setHeader("Cache-Control", `max-age=${cacheMaxAge}`)
