@@ -1,0 +1,548 @@
+{
+  "kind": "customsearch#search",
+  "url": {
+    "type": "application/json",
+    "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+  },
+  "queries": {
+    "request": [
+      {
+        "title": "Google Custom Search - eggs",
+        "totalResults": "156000",
+        "searchTerms": "eggs",
+        "count": 10,
+        "startIndex": 1,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "11111111111111111"
+      }
+    ],
+    "nextPage": [
+      {
+        "title": "Google Custom Search - eggs",
+        "totalResults": "156000",
+        "searchTerms": "eggs",
+        "count": 10,
+        "startIndex": 11,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "11111111111111111"
+      }
+    ]
+  },
+  "context": {
+    "title": "Recipes"
+  },
+  "searchInformation": {
+    "searchTime": 0.336572,
+    "formattedSearchTime": "0.34",
+    "totalResults": "55",
+    "formattedTotalResults": "156,000"
+  },
+  "items": [
+    {
+      "kind": "customsearch#result",
+      "title": "Classic Deviled Eggs Recipe | Mary Nolan | Food Network",
+      "htmlTitle": "Classic Deviled <b>Eggs</b> Recipe | Mary Nolan | Food Network",
+      "link": "https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Crack egg shells and carefully peel under cool running water. Gently dry with paper towels. Slice the eggs in half lengthwise, removing yolks to a medium bowl, ...",
+      "htmlSnippet": "Crack <b>egg</b> shells and carefully peel under cool running water. Gently dry with paper towels. Slice the <b>eggs</b> in half lengthwise, removing yolks to a medium bowl,&nbsp;...",
+      "cacheId": "VLhzswX3aTQJ",
+      "formattedUrl": "https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/recipes/classic-deviled-<b>eggs</b>-recipe-1911032",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTWnCKPoDDLNBbFd_5R46EmjMa7hxmXO-G8HZneXRRs0eQcpPNK_iDpKDU",
+            "width": "259",
+            "height": "194"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/6/9/0/CI0103_Classic-Deviled-Eggs.jpg.rend.hgtvcom.616.462.suffix/1479929974560.jpeg",
+            "twitter:card": "summary",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Classic Deviled Eggs",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Get Classic Deviled Eggs Recipe from Food Network",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/01823911078",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_09; pnmh_38; pn_epoch:1649695136016",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "15ms",
+            "og:url": "https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//recipes/classic-deviled-eggs-recipe-1911032",
+            "be:messages": "268736"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/6/9/0/CI0103_Classic-Deviled-Eggs.jpg.rend.hgtvcom.616.462.suffix/1479929974560.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Lemon Caper Deviled Eggs Recipe | Katie Lee Biegel | Food Network",
+      "htmlTitle": "Lemon Caper Deviled <b>Eggs</b> Recipe | Katie Lee Biegel | Food Network",
+      "link": "https://www.foodnetwork.com/recipes/katie-lee/lemon-caper-deviled-eggs-12342896",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Reduce the heat to a low boil and cook for 10 minutes. Drain. When they are cool enough to handle, peel the eggs. Slice each egg in half lengthwise. Remove the ...",
+      "htmlSnippet": "Reduce the heat to a low boil and cook for 10 minutes. Drain. When they are cool enough to handle, peel the <b>eggs</b>. Slice each <b>egg</b> in half lengthwise. Remove the&nbsp;...",
+      "cacheId": "4gLBy69tH3gJ",
+      "formattedUrl": "https://www.foodnetwork.com/...lee/lemon-caper-deviled-eggs-12342896",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/...lee/lemon-caper-deviled-<b>eggs</b>-12342896",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSboIJoFWKnyfUvC1PrU1oUD4OsIofZ_p4WUp83ijA7vq6uPqfo-yBInUA",
+            "width": "136",
+            "height": "102"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/03/17/0/KC3008_katie-lee-biegel-lemon-caper-deviled-eggs-2_s4x3.jpg.rend.hgtvcom.616.462.suffix/1647534345737.jpeg",
+            "twitter:card": "summary",
+            "fb:app_id": "582148248497951",
+            "og:site_name": "Food Network",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "og:title": "Lemon Caper Deviled Eggs",
+            "tp:preferredruntimes": "Flash,HTML5",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "og:url": "https://www.foodnetwork.com/recipes/katie-lee/lemon-caper-deviled-eggs-12342896",
+            "og:description": "Get Lemon Caper Deviled Eggs Recipe from Food Network",
+            "tp:initialize": "false"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/03/17/0/KC3008_katie-lee-biegel-lemon-caper-deviled-eggs-2_s4x3.jpg.rend.hgtvcom.616.462.suffix/1647534345737.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "How Long Are Hard Boiled Eggs Good For? | Food Network Healthy ...",
+      "htmlTitle": "How Long Are Hard Boiled <b>Eggs</b> Good For? | Food Network Healthy ...",
+      "link": "https://www.foodnetwork.com/healthyeats/healthy-tips/2020/02/how-long-is-hard-boiled-egg-good-for",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Mar 1, 2022 ... Peeled hard-cooked eggs stored in the refrigerator should be consumed within 48 hours due to the moist egg white surface being exposed and the ...",
+      "htmlSnippet": "Mar 1, 2022 <b>...</b> Peeled hard-cooked <b>eggs</b> stored in the refrigerator should be consumed within 48 hours due to the moist <b>egg</b> white surface being exposed and the&nbsp;...",
+      "cacheId": "K82Nm3U9rWgJ",
+      "formattedUrl": "https://www.foodnetwork.com/.../how-long-is-hard-boiled-egg-good-for",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/.../how-long-is-hard-boiled-<b>egg</b>-good-for",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRXXK6CXmaxqN0ESC4llPm5tuR75JudDQAz4E3SNPUJiPCIVKXu9sVDdqF3",
+            "width": "259",
+            "height": "194"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/02/21/he_hard-boiled-eggs-getty_s4x3.jpg.rend.hgtvcom.616.462.suffix/1582562922873.jpeg",
+            "twitter:card": "summary",
+            "og:type": "article",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "How Long Are Hard-Boiled Eggs Good For?",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "It all depends on how you store them.",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/healthyeats/healthy-tips/2020/02/how-long-is-hard-boiled-egg-good-for",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/489648068",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_08; pnmh_48; pn_epoch:1649692100397",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "19ms",
+            "og:url": "https://www.foodnetwork.com/healthyeats/healthy-tips/2020/02/how-long-is-hard-boiled-egg-good-for",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//healthyeats/healthy-tips/2020/02/how-long-is-hard-boiled-egg-good-for",
+            "be:messages": "256494"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/02/21/he_hard-boiled-eggs-getty_s4x3.jpg.rend.hgtvcom.616.462.suffix/1582562922873.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Eggs All Day | Trisha's Southern Kitchen | Food Network",
+      "htmlTitle": "<b>Eggs</b> All Day | Trisha&#39;s Southern Kitchen | Food Network",
+      "link": "https://www.foodnetwork.com/shows/trishas-southern-kitchen/episodes/eggs-all-day",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "They return with more eggs than they can handle, so they decide to make an egg-centric menu consisting of Avocado Toast with Creamy Soft Scrambled Eggs, ...",
+      "htmlSnippet": "They return with more <b>eggs</b> than they can handle, so they decide to make an <b>egg</b>-centric menu consisting of Avocado Toast with Creamy Soft Scrambled <b>Eggs</b>,&nbsp;...",
+      "cacheId": "gZTd62T8EV4J",
+      "formattedUrl": "https://www.foodnetwork.com/shows/trishas-southern.../eggs-all-day",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/shows/trishas-southern.../<b>eggs</b>-all-day",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTcls64sB1aNioxdCHJZYqaKpWa9qI5tGbQDioiEecZIifw-Bh4saTfauE",
+            "width": "231",
+            "height": "174"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "twitter:card": "summary",
+            "fb:app_id": "582148248497951",
+            "og:site_name": "Food Network",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "og:title": "Eggs All Day",
+            "tp:preferredruntimes": "Flash,HTML5",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "og:url": "https://www.foodnetwork.com/shows/trishas-southern-kitchen/episodes/eggs-all-day",
+            "og:description": "Trisha Yearwood's sister, Beth, is thinking about owning her own chicken coop, so the Yearwood sisters head to their friend's farm to learn the basics! They return with more eggs than they can handle, so they decide to make an egg-centric menu consisting of Avocado Toast with Creamy Soft Scrambled Eggs, Deviled Egg Salad Club Sandwiches, Sweet Potato Asparagus Hash with Fried Eggs, and Chocolate Souffles with Triple Raspberry Sauce.",
+            "tp:initialize": "false"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/1/9/4/YW0909H_sweet-potato-and-asparagus-hash-with-fried-egg_s4x3.jpg.rend.hgtvcom.231.174.suffix/1484024438410.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Deviled Eggs Recipe | Ree Drummond | Food Network",
+      "htmlTitle": "Deviled <b>Eggs</b> Recipe | Ree Drummond | Food Network",
+      "link": "https://www.foodnetwork.com/recipes/ree-drummond/deviled-eggs-recipe-2074740",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Peel the eggs, cut in half and scoop out the yolks into a medium bowl. Add the mayo, mustard, pickles, pickle juice, sugar, vinegar, hot sauce and salt and ...",
+      "htmlSnippet": "Peel the <b>eggs</b>, cut in half and scoop out the yolks into a medium bowl. Add the mayo, mustard, pickles, pickle juice, sugar, vinegar, hot sauce and salt and&nbsp;...",
+      "cacheId": "sL-oQZLc70IJ",
+      "formattedUrl": "https://www.foodnetwork.com/recipes/ree.../deviled-eggs-recipe-2074740",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/recipes/ree.../deviled-<b>eggs</b>-recipe-2074740",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTIdDp2naPdLfLIaV7Rdqj9sPZZAgWOiNBoo9lnxNJb1Yxwzp-Du6eBnJQ",
+            "width": "259",
+            "height": "194"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/6/19/1/WU0502H_deviled-eggs-recipe_s4x3.jpg.rend.hgtvcom.616.462.suffix/1519339496102.jpeg",
+            "twitter:card": "summary",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Deviled Eggs",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Get Deviled Eggs Recipe from Food Network",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/recipes/ree-drummond/deviled-eggs-recipe-2074740",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/01665266488",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_09; pnmh_24; pn_epoch:1649694248939",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "20ms",
+            "og:url": "https://www.foodnetwork.com/recipes/ree-drummond/deviled-eggs-recipe-2074740",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//recipes/ree-drummond/deviled-eggs-recipe-2074740",
+            "be:messages": "253490"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/6/19/1/WU0502H_deviled-eggs-recipe_s4x3.jpg.rend.hgtvcom.616.462.suffix/1519339496102.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Is It Safe to Eat Eggs Every Day? | Food Network Healthy Eats ...",
+      "htmlTitle": "Is It Safe to Eat <b>Eggs</b> Every Day? | Food Network Healthy Eats ...",
+      "link": "https://www.foodnetwork.com/healthyeats/healthy-tips/is-it-safe-to-eat-eggs-every-day",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Apr 8, 2021 ... Healthy adults can eat up to one egg per day, according to the American Heart Association. Older people may be able to eat up to two eggs ...",
+      "htmlSnippet": "Apr 8, 2021 <b>...</b> Healthy adults can eat up to one <b>egg</b> per day, according to the American Heart Association. Older people may be able to eat up to two <b>eggs</b>&nbsp;...",
+      "cacheId": "tbuJQ_KrvqcJ",
+      "formattedUrl": "https://www.foodnetwork.com/healthyeats/.../is-it-safe-to-eat-eggs-every-day",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/healthyeats/.../is-it-safe-to-eat-<b>eggs</b>-every-day",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRIAIftuaNShp129QtfZxJoWEbheWe2SUXQ6HEIU8dOKXkOrno37rB6ELtH",
+            "width": "259",
+            "height": "194"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/06/fn_hard-boiled-eggs-getty_s4x3.jpg.rend.hgtvcom.616.462.suffix/1617821606911.jpeg",
+            "twitter:card": "summary",
+            "og:type": "article",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Is It Safe to Eat Eggs Every Day?",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Like many good things, eggs should be consumed in moderation. Here's what that means.",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/healthyeats/healthy-tips/is-it-safe-to-eat-eggs-every-day",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/095124337",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_08; pnmh_50; pn_epoch:1649692238709",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "14ms",
+            "og:url": "https://www.foodnetwork.com/healthyeats/healthy-tips/is-it-safe-to-eat-eggs-every-day",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//healthyeats/healthy-tips/is-it-safe-to-eat-eggs-every-day",
+            "be:messages": "257819"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/06/fn_hard-boiled-eggs-getty_s4x3.jpg.rend.hgtvcom.616.462.suffix/1617821606911.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Tips for Making Perfect Poached Eggs : Recipes and Cooking : Food ...",
+      "htmlTitle": "Tips for Making Perfect Poached <b>Eggs</b> : Recipes and Cooking : Food ...",
+      "link": "https://www.foodnetwork.com/recipes/articles/tips-for-making-perfect-poached-eggs",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Always use fresh eggs. If you can't see the difference between the \"thick\" white and the \"thin\" white, the yolks will probably break in the pan.",
+      "htmlSnippet": "Always use fresh <b>eggs</b>. If you can&#39;t see the difference between the &quot;thick&quot; white and the &quot;thin&quot; white, the yolks will probably break in the pan.",
+      "cacheId": "5zYXvN0N13kJ",
+      "formattedUrl": "https://www.foodnetwork.com/.../tips-for-making-perfect-poached-eggs",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/.../tips-for-making-perfect-poached-<b>eggs</b>",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQAAkUbOBHD50hl9t975wiOO-qWzH8Zz6ax74jXaTZo-GGRD7prj93Cl46f",
+            "width": "259",
+            "height": "194"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/2/28/5/FNM_040112-Alton-Eggs-021_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371606254170.jpeg",
+            "twitter:card": "summary",
+            "og:type": "article",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Tips for Making Perfect Poached Eggs",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/recipes/articles/tips-for-making-perfect-poached-eggs",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/0375488460",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_09; pnmh_11; pn_epoch:1649693480572",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "30ms",
+            "og:url": "https://www.foodnetwork.com/recipes/articles/tips-for-making-perfect-poached-eggs",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//recipes/articles/tips-for-making-perfect-poached-eggs",
+            "be:messages": "261176"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/2/28/5/FNM_040112-Alton-Eggs-021_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371606254170.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "The Difference Between Eggs: Pasture-Raised, Caged, Cage-Free ...",
+      "htmlTitle": "The Difference Between <b>Eggs</b>: Pasture-Raised, Caged, Cage-Free ...",
+      "link": "https://www.foodnetwork.com/healthyeats/healthy-tips/2019/08/pasture-raised-eggs",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "The egg aisle isn't what it used to be. What was once a decision between white or brown eggs has become a time-consuming task full of labels and industry ...",
+      "htmlSnippet": "The <b>egg</b> aisle isn&#39;t what it used to be. What was once a decision between white or brown <b>eggs</b> has become a time-consuming task full of labels and industry&nbsp;...",
+      "cacheId": "tfOcE_zden8J",
+      "formattedUrl": "https://www.foodnetwork.com/healthyeats/healthy-tips/.../pasture-raised-eggs",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/healthyeats/healthy-tips/.../pasture-raised-<b>eggs</b>",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcScCS4JezfFFLFkNokkvC9H5Qb8vdebLq9nLV8pUV5yyKAbMXEf-EQWeEE",
+            "width": "259",
+            "height": "194"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/8/7/0/RX_Vital-Farms-Pasterized-Eggs.jpg.rend.hgtvcom.616.462.suffix/1565201195045.jpeg",
+            "twitter:card": "summary",
+            "og:type": "article",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "What Are Pasture-Raised Eggs?",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Our expert breaks down all the labels you'll find on an egg carton these days.",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/healthyeats/healthy-tips/2019/08/pasture-raised-eggs",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/113247184",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_08; pnmh_48; pn_epoch:1649692127338",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "15ms",
+            "og:url": "https://www.foodnetwork.com/healthyeats/healthy-tips/2019/08/pasture-raised-eggs",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//healthyeats/healthy-tips/2019/08/pasture-raised-eggs",
+            "be:messages": "107798"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/8/7/0/RX_Vital-Farms-Pasterized-Eggs.jpg.rend.hgtvcom.616.462.suffix/1565201195045.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Crispy Easter Eggs Recipe | Ree Drummond | Food Network",
+      "htmlTitle": "Crispy Easter <b>Eggs</b> Recipe | Ree Drummond | Food Network",
+      "link": "https://www.foodnetwork.com/recipes/ree-drummond/crispy-easter-eggs-2744152",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Directions. Special equipment: plastic Easter egg molds and a clean egg crate. In a large saucepan, melt ...",
+      "htmlSnippet": "Directions. Special equipment: plastic Easter <b>egg</b> molds and a clean <b>egg</b> crate. In a large saucepan, melt&nbsp;...",
+      "cacheId": "yKPm7uyF6E4J",
+      "formattedUrl": "https://www.foodnetwork.com/recipes/ree.../crispy-easter-eggs-2744152",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/recipes/ree.../crispy-easter-<b>eggs</b>-2744152",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQZY2potm_zCdvN10UbEQOZIo39RVrxpKmLm9wc6esLaMvn2iUlZOKENVY",
+            "width": "259",
+            "height": "194"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/4/8/3/WU1002H_Crispy-Easter-Eggs_s4x3.jpg.rend.hgtvcom.616.462.suffix/1428524494314.jpeg",
+            "twitter:card": "summary",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Crispy Easter Eggs",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Get Crispy Easter Eggs Recipe from Food Network",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/recipes/ree-drummond/crispy-easter-eggs-2744152",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/1222272796",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_09; pnmh_31; pn_epoch:1649694700547",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "16ms",
+            "og:url": "https://www.foodnetwork.com/recipes/ree-drummond/crispy-easter-eggs-2744152",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//recipes/ree-drummond/crispy-easter-eggs-2744152",
+            "be:messages": "254277"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/4/8/3/WU1002H_Crispy-Easter-Eggs_s4x3.jpg.rend.hgtvcom.616.462.suffix/1428524494314.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Eggs Benedict Recipe | Ree Drummond | Food Network",
+      "htmlTitle": "<b>Eggs</b> Benedict Recipe | Ree Drummond | Food Network",
+      "link": "https://www.foodnetwork.com/recipes/ree-drummond/eggs-benedict-recipe-2107801",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Add the egg yolks to a blender or a food processor. Add in the lemon juice and blend for several seconds. With the blender on, slowly drizzle in the melted ...",
+      "htmlSnippet": "Add the <b>egg</b> yolks to a blender or a food processor. Add in the lemon juice and blend for several seconds. With the blender on, slowly drizzle in the melted&nbsp;...",
+      "cacheId": "FTBiBaDA5C8J",
+      "formattedUrl": "https://www.foodnetwork.com/recipes/ree.../eggs-benedict-recipe-2107801",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/recipes/ree.../<b>eggs</b>-benedict-recipe-2107801",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSs55_kq9cL5Q8vwuzPgk1AziemZNsv1fyV7BbnMxKE-TO8oZJsI-hYR5O5",
+            "width": "259",
+            "height": "194"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/4/27/0/WU0211H_eggs-benedict_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382541321583.jpeg",
+            "twitter:card": "summary",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Eggs Benedict",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Get Eggs Benedict Recipe from Food Network",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/recipes/ree-drummond/eggs-benedict-recipe-2107801",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/181040908",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_09; pnmh_35; pn_epoch:1649694925278",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "18ms",
+            "og:url": "https://www.foodnetwork.com/recipes/ree-drummond/eggs-benedict-recipe-2107801",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//recipes/ree-drummond/eggs-benedict-recipe-2107801",
+            "be:messages": "241684"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/4/27/0/WU0211H_eggs-benedict_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382541321583.jpeg"
+          }
+        ]
+      }
+    }
+  ]
+}
