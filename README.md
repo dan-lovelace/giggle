@@ -4,7 +4,7 @@ A self-hosted, customizable and ad-free Google Search experience.
 
 ## What does it do?
 
-Giggle lets you run Google searches against allow- and block-lists in an easy way. You create lists of sites to allow or block in Google's [Programmable Search Engine service](https://developers.google.com/custom-search) and Giggle will pick them up for use.
+Giggle lets you run Google searches against allow- and block-lists in an easy way. You create lists of sites to include or exclude in Google's [Programmable Search Engine service](https://developers.google.com/custom-search) and Giggle will pick them up for use.
 
 ## How it works
 
