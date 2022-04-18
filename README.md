@@ -82,7 +82,7 @@ If you'd like to contribute, feel free to [open a PR](https://github.com/dan-lov
 
 # What's Next?
 
-I'd like to build some sort of [annotation](https://developers.google.com/custom-search/docs/basics) management system to avoid having to manually create/update individual engines in the web console. It would be reduced to creating a single engine and Giggle would swap out annotation files on-the-fly. It would be much more ideal since you'd never need to visible Google's console again but could be painfully slow. Let me know in [GitHub issues](https://github.com/dan-lovelace/giggle/issues) if this interests you.
+I'd like to build some sort of [annotation](https://developers.google.com/custom-search/docs/basics) management system to avoid having to manually create/update individual engines in the web console. It would be reduced to creating a single engine and Giggle would swap out annotation files on-the-fly. It would be much more ideal since you'd never need to visit Google's console again but it could turn out to be painfully slow. Let me know in [GitHub issues](https://github.com/dan-lovelace/giggle/issues) if this interests you.
 
 Also in the cards could be a fully-managed service including hosting. Users would need to hand over their own Google login credentials and API key which I can understand being hesitant about. If that's something you're interested in, please open a [GitHub issue](https://github.com/dan-lovelace/giggle/issues) and start the conversation.
 
