@@ -42,9 +42,9 @@ Giggle is self-hosted meaning you may host it any way you like or just run it lo
 - Open the `.env` file and paste in the following template, then update the values with your own:
 
 ```sh
-GOOGLE_USERNAME=[your_email]
-GOOGLE_PASSWORD=[your_password]
-GOOGLE_API_KEY=[your_api_key]
+GOOGLE_USERNAME=your_email
+GOOGLE_PASSWORD=your_password
+GOOGLE_API_KEY=your_api_key
 ```
 
 - Run `yarn` to install dependencies
