@@ -51,11 +51,11 @@ GOOGLE_API_KEY=your_api_key
 - Run `yarn build` to create a new build
 - Run `yarn start` and wait for it to change to the `ready` state
 - Navigate to `http://localhost:3000` in a browser
-- If everything went right, you should see the Giggle homepage
+- If everything went right, you should see the Giggle homepage after a few seconds (the first time loading is a bit slower than usual)
 
 ## Troubleshooting
 
-- If you made a new Google account, it's possible the first couple login attempts by Giggle will fail due to being prompted to confirm a phone number. Try refreshing the page. You may also check the Puppeteer output in `puppeteer/screenshots` for any insight.
+- If you made a new Google account, it's possible the first couple login attempts by Giggle will fail due to being prompted to confirm a phone number. Try refreshing the page. You may also check the Puppeteer output in `puppeteer/screenshots` for any insight. If you continue having trouble, try increasing the `waitForTimeout` values in [/pages/api/engines.ts](https://github.com/dan-lovelace/giggle/blob/main/pages/api/engines.ts) from `500` to `1000` and rebuilding.
 - If you see an error saying something like "No engines found," make sure at least one search engine exists in your [Programmable Search Engine console](https://programmablesearchengine.google.com/smart_sign_in).
 - Feel free to open a [GitHub issue](https://github.com/dan-lovelace/giggle/issues) if you need additional help.
 
