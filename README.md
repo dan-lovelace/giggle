@@ -26,7 +26,7 @@ Giggle is self-hosted meaning you may host it any way you like or just run it lo
 
 ## What you'll need
 
-- Some technical knowledge - I'll walk you through it in this README.
+- Some technical knowledge - I'll walk you through it in this README. If you don't already have them, you'll need [NodeJS](https://nodejs.org/) and [yarn package manager](https://yarnpkg.com/).
 - A Google account **without** MFA - You'll need to inject its username and password as environment variables. If you're curious/concerned about how they're used, check out [this file](https://github.com/dan-lovelace/giggle/blob/main/pages/api/engines.ts). Basically, Giggle uses [Puppeteer](https://github.com/puppeteer/puppeteer) to log in to Google in order to retrieve your custom search engine IDs. If you do not have an account without MFA, just go ahead and [make a new one](https://accounts.google.com/signup) - **⚠️ MAKE SURE NOT TO TURN ON MFA! ⚠️**
 - A Google Developer API key with **Custom Search API** privileges - Giggle uses your API key to run queries against your search engines to retrieve JSON results without ads. Head over to the [Developer Console](https://console.cloud.google.com/apis/dashboard) to set this up. Each engine gets 100 queries per day for free 💰
 - At least one custom search engine configured in the Google account's [Programmable Search Engine console](https://programmablesearchengine.google.com/smart_sign_in) - Your console should look something like this:
