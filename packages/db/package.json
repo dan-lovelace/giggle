@@ -1,0 +1,17 @@
+{
+  "name": "@giggle/db",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "knex": "knex",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "knex": "^2.5.1",
+    "sqlite3": "^5.1.6",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
