@@ -26,5 +26,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# logging
-puppeteer
+# knex
+db.sqlite3

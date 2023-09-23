@@ -1,8 +1,19 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
+import { useRouter } from "next/router";
 
 import Search from "../components/search";
+import { useAppData } from "../contexts/appData";
+import { ROUTES } from "../lib/routes";
 
 export default function Home() {
+  const { engines } = useAppData();
+  const router = useRouter();
+
+  if (!engines.length) {
+    router.replace(ROUTES.ENGINES);
+    return false;
+  }
+
   return (
     <Box sx={{ textAlign: "center", padding: "5rem 1rem" }}>
       <Typography
@@ -29,12 +40,12 @@ export default function Home() {
       <Box>
         <Typography>
           Visit{" "}
-          <a
+          <Link
             href="https://programmablesearchengine.google.com/smart_sign_in"
             target="_blank"
           >
             Google Programmable Search Engine
-          </a>{" "}
+          </Link>{" "}
           to manage your engines
         </Typography>
       </Box>

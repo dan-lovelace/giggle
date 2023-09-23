@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Router from "next/router";
+
+import { css } from "@emotion/react";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Button, FormGroup, Menu, MenuItem, TextField } from "@mui/material";
 import { visuallyHidden } from "@mui/utils";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { css } from "@emotion/react";
+import Router from "next/router";
 import * as yup from "yup";
 
 import { useAppData } from "../contexts/appData";
@@ -19,7 +20,9 @@ export default function Search() {
   const [enginesEl, setEnginesEl] = useState<null | HTMLElement>(null);
   const { engines, searchInput, setSearchInput } = useAppData();
   const enginesOpen = !!enginesEl;
-  const selectedEngine = engines.find((e) => e.id === searchInput.engine);
+  const selectedEngine = engines.find(
+    (e) => e.identifier === searchInput.engine,
+  );
   const { refetch } = useResults();
 
   const handleEnginesClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -49,6 +52,7 @@ export default function Search() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!formSchema.isValidSync(searchInput)) return;
+
     Router.push({
       pathname: "/results",
       query: { ...searchInput, page: 1 } as TSearchInput,
@@ -99,7 +103,6 @@ export default function Search() {
           >
             <span
               css={{
-                // marginTop: "4px",
                 display: "inline-block",
                 whiteSpace: "nowrap",
               }}
@@ -118,12 +121,12 @@ export default function Search() {
           open={enginesOpen}
           onClose={handleEnginesClose}
         >
-          {engines.map(({ id, name }) => (
+          {engines.map(({ identifier, name }) => (
             <MenuItem
-              key={id}
-              value={id}
-              onClick={handleEngineChange(id)}
-              selected={selectedEngine?.id === id}
+              key={identifier}
+              value={identifier}
+              onClick={handleEngineChange(identifier)}
+              selected={selectedEngine?.identifier === identifier}
             >
               {name}
             </MenuItem>
