@@ -1,0 +1,36 @@
+{
+  "name": "@giggle/app",
+  "version": "1.0.0",
+  "description": "NextJS app",
+  "main": "src/pages/index.ts",
+  "scripts": {
+    "dev": "RESULTS_CACHE_LENGTH_SECONDS=0 next dev",
+    "build": "next build",
+    "knex": "NODE_ENV=development knex --cwd db",
+    "lint": "eslint .",
+    "start": "next start",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.9",
+    "@mui/material": "^5.14.10",
+    "dotenv": "^16.3.1",
+    "next": "^13.5.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-query": "^3.39.3",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@giggle/db": "*",
+    "@giggle/types": "*",
+    "@testing-library/cypress": "^10.0.1",
+    "@types/node": "^20.6.3",
+    "@types/react": "^18.2.22",
+    "cypress": "^13.2.0",
+    "typescript": "^5.2.2"
+  }
+}
