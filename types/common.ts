@@ -1,7 +1,5 @@
 export type TAppConfig = {
   googleApiKey: string;
-  googlePassword: string;
-  googleUsername: string;
   resultsCacheLengthSeconds: string;
 };
 
@@ -38,7 +36,7 @@ export type TResultsContext = {
 };
 
 export type TSearchEngine = {
-  id: string;
+  identifier: string;
   name: string;
 };
 

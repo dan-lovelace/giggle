@@ -1,89 +1,119 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import puppeteer from "puppeteer-extra";
-import StealthPlugin from "puppeteer-extra-plugin-stealth";
+import * as yup from "yup";
 
-import { config } from "../../lib/config";
-import { PUPPETEER_DIRECTORIES, takeScreenshot } from "../../lib/puppeteer";
+import { connection } from "../../db";
 import { TSearchEngine } from "../../types/common";
 
-puppeteer.use(StealthPlugin());
+const db = connection();
 
-const launchConfig = {
-  headless: true,
-  userDataDir: PUPPETEER_DIRECTORIES.BROWSER_DATA,
-};
+const schema = yup.object().shape({
+  identifier: yup.string().required(),
+  name: yup.string().required(),
+});
 
-function getEngines() {
-  return new Promise<TSearchEngine[] | Error | void>((resolve, reject) => {
-    puppeteer.launch(launchConfig).then(async (browser) => {
-      const page = await browser.newPage();
+function get() {
+  return db("engine").select(["identifier", "name"]);
+}
 
-      try {
-        await page.setDefaultNavigationTimeout(3000);
-        await page.goto(
-          "https://programmablesearchengine.google.com/smart_sign_in"
-        );
+function handleError(error: any, response: NextApiResponse) {
+  if (error instanceof yup.ValidationError) {
+    return response.status(400).send({ error: error.errors });
+  }
 
-        // login if necessary
-        const usernameInputSelector = "input#identifierId";
-        const passwordInputSelector = "input[type='password'][name='password']";
-        const [usernameInput] = await page.$$(usernameInputSelector);
-        if (usernameInput) {
-          // NOTE: the timeout waits here aren't ideal but login will fail
-          // sometimes without them because of google's form transitions,
-          // especially with slow internet.
-          await page.waitForTimeout(500);
-          await page.click(usernameInputSelector);
-          await page.keyboard.type(config.googleUsername);
-          await page.keyboard.press("Enter");
-          await page.waitForNavigation();
-          await page.waitForTimeout(500);
-          await page.click(passwordInputSelector);
-          await page.keyboard.type(config.googlePassword);
-          await page.keyboard.press("Enter");
-          await page.waitForNavigation();
-        }
+  response.status(500).send({ error: error.code ?? error });
+}
 
-        // find existing engines
-        const titleContainerSelector = "tbody .allcse-title-col a";
-        await page.waitForSelector(titleContainerSelector);
-        const titleContainers = await page.$$(titleContainerSelector);
-        const engines = await Promise.all(
-          titleContainers.map(async (element) =>
-            element.evaluate((el) => ({
-              id: el.getAttribute("href").replace(/^.*=/, ""),
-              name: el.textContent.trim(),
-            }))
-          )
-        );
+function insert(engine: TSearchEngine) {
+  return db("engine").insert(engine).returning(["identifier", "name"]);
+}
 
-        await browser.close();
-        resolve(engines);
-      } catch (e) {
-        console.error("Error getting engines:", e.message);
-        await takeScreenshot(page);
-        await browser.close();
-        reject(e);
-      }
-    });
+function remove(identifier: string) {
+  return db("engine").delete().where({ identifier });
+}
+
+function update(identifier: string, data: Partial<TSearchEngine>) {
+  return db("engine")
+    .update(data)
+    .where({ identifier })
+    .returning(["identifier", "name"]);
+}
+
+function validateEngine(body: unknown) {
+  schema.validateSync(body, {
+    abortEarly: false,
   });
 }
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
+  request: NextApiRequest,
+  response: NextApiResponse,
 ) {
-  switch (req.method) {
-    case "GET":
+  const { method } = request;
+  let { body } = request;
+
+  if (body.length) {
+    const parsed = JSON.parse(body);
+    const deepTrim = (obj: unknown) => {
+      Object.keys(obj).forEach((key) => {
+        if (typeof obj[key] === "string") {
+          obj[key] = obj[key].trim();
+        } else {
+          deepTrim(obj[key]);
+        }
+      });
+
+      return obj;
+    };
+
+    body = deepTrim(parsed);
+  }
+
+  switch (method) {
+    case "DELETE": {
       try {
-        const result = await getEngines();
-        res.status(200).send(result);
+        const result = await remove(body.identifier);
+        response.status(200).send(result);
       } catch (error) {
-        res.status(500).send({ error });
+        handleError(error, response);
       }
       break;
+    }
+
+    case "GET": {
+      try {
+        const result = await get();
+        response.status(200).send(result);
+      } catch (error) {
+        handleError(error, response);
+      }
+      break;
+    }
+
+    case "POST": {
+      try {
+        validateEngine(body);
+        const result = await insert(body);
+
+        response.status(200).send(result);
+      } catch (error) {
+        handleError(error, response);
+      }
+      break;
+    }
+
+    case "PUT": {
+      try {
+        validateEngine(body.data);
+        const result = await update(body.identifier, body.data);
+
+        response.status(200).send(result);
+      } catch (error) {
+        handleError(error, response);
+      }
+      break;
+    }
 
     default:
-      res.status(405).end();
+      response.status(405).end();
   }
 }

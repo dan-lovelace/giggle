@@ -1,7 +1,7 @@
 import { NextApiResponse } from "next";
 
-import { ENDPOINTS } from "../../lib/endpoints";
 import { config } from "../../lib/config";
+import { ENDPOINTS } from "../../lib/endpoints";
 import mock from "../../mocks/results-recipes.json";
 import {
   TGoogleItem,
@@ -17,7 +17,7 @@ const RESULTS_MAX = 100;
 
 export default async function handler(
   req: { query: TSearchInput },
-  res: NextApiResponse
+  res: NextApiResponse,
 ): Promise<void> {
   const { engine, page, query } = req.query;
   const searchParams: Record<string, string> = {
@@ -28,14 +28,14 @@ export default async function handler(
   };
 
   // REAL USAGE ---------------------------------------------------------------
-  const searchQuery = await fetch(
-    `${ENDPOINTS.GOOGLE_SEARCH}?${new URLSearchParams(searchParams)}`
-  );
-  const json = await searchQuery.json();
+  // const searchQuery = await fetch(
+  //   `${ENDPOINTS.GOOGLE_SEARCH}?${new URLSearchParams(searchParams)}`,
+  // );
+  // const json = await searchQuery.json();
   // --------------------------------------------------------------------------
 
   // MOCK USAGE ---------------------------------------------------------------
-  // const json = JSON.parse(JSON.stringify(mock));
+  const json = JSON.parse(JSON.stringify(mock));
   // --------------------------------------------------------------------------
 
   const { items: jsonItems, queries, searchInformation } = json;
@@ -47,7 +47,7 @@ export default async function handler(
       : searchInformation.totalResults;
 
   // construct a list of pages
-  let pages: TGooglePage[] = [];
+  const pages: TGooglePage[] = [];
   while (itemsRemaining > 0) {
     const number = pages.length + 1;
     pages.push({
@@ -69,7 +69,6 @@ export default async function handler(
   };
 
   const cacheMaxAge = config.resultsCacheLengthSeconds || "3600";
-  console.log("Search cache age:", cacheMaxAge);
 
   res
     .status(200)

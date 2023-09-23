@@ -1,13 +1,13 @@
 import { createContext, useContext, useState } from "react";
-import { useQuery } from "react-query";
-import { Alert } from "@mui/material";
-import Link from "next/link";
-import { useRouter } from "next/router";
 
-import { QUERIES } from "../lib/queries";
-import { ENDPOINTS } from "../lib/endpoints";
-import { TSearchEngine, TAppDataContext, TSearchInput } from "../types/common";
+import { Alert } from "@mui/material";
+import { useRouter } from "next/router";
+import { useQuery } from "react-query";
+
 import Spinner from "../components/spinner";
+import { ENDPOINTS } from "../lib/endpoints";
+import { QUERIES } from "../lib/queries";
+import { TSearchEngine, TAppDataContext, TSearchInput } from "../types/common";
 
 const AppDataContext = createContext<TAppDataContext>({
   engines: [],
@@ -46,7 +46,7 @@ export function AppDataProvider({ children }): JSX.Element {
             engine:
               locationQuery.get("engine") ||
               searchInput.engine ||
-              result[0]?.id ||
+              result[0]?.identifier ||
               initialSearchInput.engine,
             query: locationQuery.get("query") || initialSearchInput.query,
             page:
@@ -62,25 +62,13 @@ export function AppDataProvider({ children }): JSX.Element {
 
         updateSearchInput();
       },
-    }
+    },
   );
 
   if (isLoading) return <Spinner />;
 
   if (error) {
     return <Alert severity="error">{error.message}</Alert>;
-  }
-
-  if (!data.length) {
-    return (
-      <Alert severity="error">
-        No engines found. Visit{" "}
-        <Link href="https://programmablesearchengine.google.com/cse/all">
-          https://programmablesearchengine.google.com/cse/all
-        </Link>{" "}
-        to make one.
-      </Alert>
-    );
   }
 
   const resetSearchInput = () => {
