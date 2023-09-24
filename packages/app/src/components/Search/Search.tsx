@@ -20,10 +20,13 @@ import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import * as yup from "yup";
 
-import { useAppData } from "../contexts/appData";
-import { useResults } from "../contexts/resultsData";
-import { useEngines } from "../hooks";
-import { ROUTES } from "../lib/routes";
+import { useResults } from "../../contexts/resultsData";
+import { useSearchData } from "../../contexts/searchData";
+import { useEngines } from "../../hooks";
+import { ROUTES } from "../../lib/routes";
+import { STORAGE_KEYS } from "../../lib/storage";
+
+const { ENGINE } = STORAGE_KEYS;
 
 const formSchema = yup.object().shape({
   query: yup.string().required(),
@@ -42,9 +45,9 @@ export default function Search() {
   const {
     engines: { data },
   } = useEngines();
-  const { searchInput, setSearchInput } = useAppData();
+  const { searchInput, setSearchInput } = useSearchData();
   const enginesOpen = !!enginesEl;
-  const selectedEngine = data.find((e) => e.identifier === searchInput.engine);
+  const selectedEngine = data?.find((e) => e.identifier === searchInput.engine);
   const { refetch } = useResults();
   const router = useRouter();
 
@@ -52,17 +55,18 @@ export default function Search() {
     function initialize() {
       const updateSearchInput = () => {
         const locationQuery = new URLSearchParams(window.location.search);
-        const storedEngine = localStorage.getItem("giggle-engine");
+        const pageQuery = locationQuery.get("page");
+        const storedEngine = localStorage.getItem(ENGINE);
         const currentInput: TSearchInput = {
           engine:
             locationQuery.get("engine") ||
             searchInput.engine ||
-            (data.find((engine) => engine.identifier === storedEngine) &&
+            (data?.find((engine) => engine.identifier === storedEngine) &&
               storedEngine) ||
             initialSearchInput.engine,
           query: locationQuery.get("query") || initialSearchInput.query,
           page:
-            parseInt(locationQuery.get("page"), 10) || initialSearchInput.page,
+            (pageQuery && parseInt(pageQuery, 10)) || initialSearchInput.page,
         };
 
         setSearchInput(currentInput);
@@ -79,7 +83,13 @@ export default function Search() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("giggle-engine", searchInput.engine);
+    const { engine } = searchInput;
+
+    if (engine) {
+      localStorage.setItem(ENGINE, engine);
+    } else {
+      localStorage.removeItem(ENGINE);
+    }
   }, [searchInput]);
 
   const handleEnginesClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -118,7 +128,7 @@ export default function Search() {
     });
   };
 
-  if (!data.length) {
+  if (!data?.length) {
     return false;
   }
 

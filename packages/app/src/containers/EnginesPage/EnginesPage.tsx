@@ -26,7 +26,7 @@ export default function EnginesPage() {
       <Typography variant="h6" sx={{ mb: 1 }}>
         Search Engines
       </Typography>
-      {!data.length ? (
+      {!data?.length ? (
         <Alert severity="info" sx={{ maxWidth: breakpoints.values.md }}>
           <AlertTitle>No engines</AlertTitle>
           You'll need to add at least one search engine to get started. Once
@@ -40,7 +40,7 @@ export default function EnginesPage() {
           </Box>
         </Alert>
       ) : (
-        <Box sx={{ maxWidth: breakpoints.values.sm }}>
+        <Box sx={{ maxWidth: breakpoints.values.md }}>
           <List
             sx={{
               "& .MuiListItem-root:not(:last-child)": {
@@ -55,6 +55,9 @@ export default function EnginesPage() {
               </Grid>
               <Grid item xs>
                 <Typography variant="caption">Engine ID</Typography>
+              </Grid>
+              <Grid item xs>
+                <Typography variant="caption">API Type</Typography>
               </Grid>
               <Grid item xs>
                 <Typography variant="caption" hidden>

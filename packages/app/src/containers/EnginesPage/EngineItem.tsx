@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
 
-import { TSearchEngine } from "@giggle/types";
+import { DBTEngine, TApiType } from "@giggle/types";
 import CheckIcon from "@mui/icons-material/Check";
 import ClearIcon from "@mui/icons-material/Clear";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -10,20 +10,32 @@ import {
   Grid,
   IconButton,
   ListItem,
+  SelectChangeEvent,
   Stack,
   TextField,
 } from "@mui/material";
 
+import { apiTypeLabelMap } from ".";
+import ApiTypeSelect from "./ApiTypeSelect";
 import { useEngines } from "../../hooks";
+import { getResponseBody } from "../../lib/helpers";
 
-export default function Engine({ identifier, name }: TSearchEngine) {
-  const [editedValues, setEditedValues] = useState<TSearchEngine>({
+export default function Engine({ api_type, identifier, name }: DBTEngine) {
+  const [editedValues, setEditedValues] = useState<DBTEngine>({
+    api_type,
     identifier,
     name,
   });
   const [isConfirmingDelete, setIsConfirmingDelete] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const { remove, update } = useEngines();
+
+  const handleApiTypeChange = (event: SelectChangeEvent) => {
+    setEditedValues({
+      ...editedValues,
+      api_type: event.target.value as TApiType,
+    });
+  };
 
   const handleCancelConfirmDelete = () => {
     setIsConfirmingDelete(false);
@@ -56,9 +68,9 @@ export default function Engine({ identifier, name }: TSearchEngine) {
       {
         async onSuccess(response) {
           if (response.ok) {
-            const json = await response.json();
+            const body = await getResponseBody(response);
 
-            setEditedValues(json[0]);
+            setEditedValues(body[0]);
             setIsEditing(false);
           }
         },
@@ -95,6 +107,16 @@ export default function Engine({ identifier, name }: TSearchEngine) {
             />
           ) : (
             identifier
+          )}
+        </Grid>
+        <Grid item xs>
+          {isEditing ? (
+            <ApiTypeSelect
+              formData={editedValues}
+              onChange={handleApiTypeChange}
+            />
+          ) : (
+            apiTypeLabelMap[api_type]
           )}
         </Grid>
         <Grid item xs>

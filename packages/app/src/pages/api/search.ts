@@ -1,7 +1,7 @@
+import { connection } from "@giggle/db";
 import {
-  TGoogleItem,
   TGooglePage,
-  TGoogleQuery,
+  TGoogleResponse,
   TSearchInput,
   TSearchResults,
 } from "@giggle/types";
@@ -9,47 +9,69 @@ import { NextApiResponse } from "next";
 
 import { config } from "../../lib/config";
 import { ENDPOINTS } from "../../lib/endpoints";
+import { getResponseBody } from "../../lib/helpers";
 import mock from "../../mocks/results-recipes.json";
 
 // these are the maximum values allowed by google
 const PAGE_SIZE = 10;
 const RESULTS_MAX = 100;
 
+const { googleApiKey, mockResults } = config;
+
 export default async function handler(
-  req: { query: TSearchInput },
-  res: NextApiResponse,
-): Promise<void> {
-  const { engine, page, query } = req.query;
+  request: { query: TSearchInput },
+  response: NextApiResponse,
+) {
+  const {
+    query: { engine = "", page = 1, query = "" },
+  } = request;
+
+  if (!googleApiKey) {
+    throw new Error("Missing Google API key");
+  }
+
   const searchParams: Record<string, string> = {
-    key: config.googleApiKey,
+    key: googleApiKey,
     cx: engine,
     q: query,
     start: String(page * PAGE_SIZE - PAGE_SIZE + 1),
   };
 
-  // REAL USAGE ---------------------------------------------------------------
-  // const searchQuery = await fetch(
-  //   `${ENDPOINTS.GOOGLE_SEARCH}?${new URLSearchParams(searchParams)}`,
-  // );
-  // const json = await searchQuery.json();
-  // --------------------------------------------------------------------------
+  const db = connection();
+  const { api_type } = await db("engine")
+    .select("api_type")
+    .where({ identifier: engine })
+    .first();
+  const endpoint = ENDPOINTS.GOOGLE_SEARCH[api_type];
 
-  // MOCK USAGE ---------------------------------------------------------------
-  const json = JSON.parse(JSON.stringify(mock));
-  // --------------------------------------------------------------------------
+  let json: TGoogleResponse;
+  if (mockResults) {
+    json = JSON.parse(JSON.stringify(mock));
+  } else {
+    const searchQuery = await fetch(
+      `${endpoint}?${new URLSearchParams(searchParams)}`,
+    );
+    json = await getResponseBody(searchQuery);
+  }
 
-  const { items: jsonItems, queries, searchInformation } = json;
-  const items: Array<TGoogleItem> = jsonItems;
-  const metadata: TGoogleQuery = queries.request[0];
+  const {
+    items,
+    queries: {
+      request: [metadata],
+    },
+    searchInformation,
+  } = json;
+
+  // construct list of pages
   let itemsRemaining =
     searchInformation.totalResults >= RESULTS_MAX
       ? RESULTS_MAX
       : searchInformation.totalResults;
+  const pages: Array<TGooglePage> = [];
 
-  // construct a list of pages
-  const pages: TGooglePage[] = [];
   while (itemsRemaining > 0) {
     const number = pages.length + 1;
+
     pages.push({
       link: `/results?${new URLSearchParams({
         engine,
@@ -66,11 +88,11 @@ export default async function handler(
     items,
     metadata,
     pages,
+    searchInformation,
   };
+  const cacheMaxAge = config.resultsCacheLengthSeconds ?? "3600";
 
-  const cacheMaxAge = config.resultsCacheLengthSeconds || "3600";
-
-  res
+  response
     .status(200)
     .setHeader("Cache-Control", `max-age=${cacheMaxAge}`)
     .json(result);

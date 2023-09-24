@@ -1,29 +1,39 @@
 import { connection } from "@giggle/db";
-import { TSearchEngine } from "@giggle/types";
+import { DBTEngine } from "@giggle/types";
 import { NextApiRequest, NextApiResponse } from "next";
-import * as yup from "yup";
+import { z } from "zod";
 
 const db = connection();
 
-const schema = yup.object().shape({
-  identifier: yup.string().required(),
-  name: yup.string().required(),
-});
+const parser: z.ZodType<DBTEngine> = z.lazy(() =>
+  z.object({
+    api_type: z.union([z.literal("DEFAULT"), z.literal("SITE_RESTRICTED")]),
+    identifier: z.string(),
+    name: z.string(),
+  }),
+);
+
+const returning = ["api_type", "identifier", "name"];
 
 function get() {
-  return db("engine").select(["identifier", "name"]);
+  return db("engine").select(returning);
 }
 
 function handleError(error: any, response: NextApiResponse) {
-  if (error instanceof yup.ValidationError) {
-    return response.status(400).send({ error: error.errors });
+  if (error instanceof z.ZodError) {
+    const {
+      errors: [firstError],
+    } = error;
+    const message = `${firstError.message}: ${firstError.code}`;
+
+    return response.status(400).send({ error: message });
   }
 
   response.status(500).send({ error: error.code ?? error });
 }
 
-function insert(engine: TSearchEngine) {
-  return db("engine").insert(engine).returning(["identifier", "name"]);
+function insert(engine: DBTEngine) {
+  return db("engine").insert(engine).returning(returning);
 }
 
 async function remove(identifier: string) {
@@ -32,17 +42,12 @@ async function remove(identifier: string) {
   return { identifier };
 }
 
-function update(identifier: string, data: Partial<TSearchEngine>) {
-  return db("engine")
-    .update(data)
-    .where({ identifier })
-    .returning(["identifier", "name"]);
+function update(identifier: string, data: Partial<DBTEngine>) {
+  return db("engine").update(data).where({ identifier }).returning(returning);
 }
 
 function validateEngine(body: unknown) {
-  schema.validateSync(body, {
-    abortEarly: false,
-  });
+  return parser.parse(body);
 }
 
 export default async function handler(
@@ -54,7 +59,7 @@ export default async function handler(
 
   if (body.length) {
     const parsed = JSON.parse(body);
-    const deepTrim = (obj: unknown) => {
+    const deepTrim = (obj: any) => {
       Object.keys(obj).forEach((key) => {
         if (typeof obj[key] === "string") {
           obj[key] = obj[key].trim();
@@ -92,8 +97,8 @@ export default async function handler(
 
     case "POST": {
       try {
-        validateEngine(body);
-        const result = await insert(body);
+        const data = validateEngine(body);
+        const result = await insert(data);
 
         response.status(200).send(result);
       } catch (error) {
@@ -104,8 +109,8 @@ export default async function handler(
 
     case "PUT": {
       try {
-        validateEngine(body.data);
-        const result = await update(body.identifier, body.data);
+        const data = validateEngine(body.data);
+        const result = await update(body.identifier, data);
 
         response.status(200).send(result);
       } catch (error) {
