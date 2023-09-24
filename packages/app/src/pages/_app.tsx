@@ -7,13 +7,15 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 import "../styles/index.css";
-import Spinner from "../components/spinner";
-import { AppDataProvider } from "../contexts/appData";
+import { Spinner } from "../components/Spinner";
+import { SearchDataProvider } from "../contexts/searchData";
 import { ToastProvider } from "../contexts/toast";
 import { useEngines } from "../hooks";
+import { siteTitle } from "../lib/config";
 import { themeComponents } from "../styles/muiTheme";
 
 const queryClient = new QueryClient();
@@ -36,18 +38,7 @@ export default function App(appProps: AppProps) {
     () =>
       createTheme({
         palette: {
-          // mode: prefersDarkMode ? "dark" : "light",
-          // ...(prefersDarkMode
-          //   ? {
-          //       primary: {
-          //         main: "#A8DADC",
-          //       },
-          //     }
-          //   : {
-          //       primary: {
-          //         main: "#457B9D",
-          //       },
-          //     }),
+          mode: prefersDarkMode ? "dark" : "light",
         },
         components: themeComponents,
       }),
@@ -55,15 +46,20 @@ export default function App(appProps: AppProps) {
   );
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <ToastProvider>
-          <AppDataProvider>
-            <AppContent {...appProps} />
-          </AppDataProvider>
-        </ToastProvider>
-      </ThemeProvider>
-    </QueryClientProvider>
+    <>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <ToastProvider>
+            <SearchDataProvider>
+              <AppContent {...appProps} />
+            </SearchDataProvider>
+          </ToastProvider>
+        </ThemeProvider>
+      </QueryClientProvider>
+    </>
   );
 }

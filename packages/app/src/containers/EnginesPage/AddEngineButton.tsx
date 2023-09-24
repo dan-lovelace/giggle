@@ -1,14 +1,33 @@
-import { FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
-import { TSearchEngine } from "@giggle/types";
+import { TApiType, DBTEngine } from "@giggle/types";
 import AddIcon from "@mui/icons-material/Add";
-import { Button, Grid, Stack, TextField } from "@mui/material";
+import {
+  Button,
+  Grid,
+  SelectChangeEvent,
+  Stack,
+  TextField,
+} from "@mui/material";
 
+import ApiTypeSelect from "./ApiTypeSelect";
 import { useEngines } from "../../hooks";
 
 export default function AddEngineButton() {
+  const [formData, setFormData] = useState<DBTEngine>({
+    api_type: "DEFAULT",
+    identifier: "",
+    name: "",
+  });
   const [isCreating, setIsCreating] = useState(false);
   const { create } = useEngines();
+
+  const handleApiTypeChange = (event: SelectChangeEvent) => {
+    setFormData({
+      ...formData,
+      api_type: event.target.value as TApiType,
+    });
+  };
 
   const handleCancelClick = () => {
     setIsCreating(false);
@@ -20,15 +39,22 @@ export default function AddEngineButton() {
 
   const handleCreateSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const body = Object.fromEntries(formData) as TSearchEngine;
 
-    create(body, {
+    create(formData, {
       onSuccess(response) {
         if (response.ok) {
           setIsCreating(false);
         }
       },
+    });
+  };
+
+  const handleTextFieldChange = ({
+    target: { name, value },
+  }: ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [name]: value,
     });
   };
 
@@ -38,7 +64,14 @@ export default function AddEngineButton() {
         <form onSubmit={handleCreateSubmit}>
           <Grid container spacing={1}>
             <Grid item>
-              <TextField name="name" size="small" label="Name" required />
+              <TextField
+                name="name"
+                size="small"
+                label="Name"
+                required
+                value={formData.name}
+                onChange={handleTextFieldChange}
+              />
             </Grid>
             <Grid item>
               <TextField
@@ -46,9 +79,18 @@ export default function AddEngineButton() {
                 size="small"
                 label="Engine ID"
                 required
+                value={formData.identifier}
+                onChange={handleTextFieldChange}
               />
             </Grid>
-            <Grid item>
+            <Grid item xs>
+              <ApiTypeSelect
+                formData={formData}
+                showLabel
+                onChange={handleApiTypeChange}
+              />
+            </Grid>
+            <Grid item xs={12}>
               <Stack direction="row" spacing={1} sx={{ height: "100%" }}>
                 <Button type="submit" variant="outlined">
                   Create

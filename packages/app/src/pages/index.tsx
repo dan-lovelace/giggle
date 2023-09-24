@@ -1,8 +1,8 @@
 import { Box, Link, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
-import Search from "../components/search";
-import Spinner from "../components/spinner";
+import Search from "../components/Search/Search";
+import { Spinner } from "../components/Spinner";
 import { useEngines } from "../hooks";
 import { ROUTES } from "../lib/routes";
 
@@ -16,7 +16,7 @@ export default function Home() {
     return <Spinner />;
   }
 
-  if (!data.length) {
+  if (!data?.length) {
     router.replace(ROUTES.ENGINES);
     return false;
   }

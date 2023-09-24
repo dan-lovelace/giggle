@@ -5,13 +5,17 @@ import { Alert } from "@mui/material";
 import { useRouter } from "next/router";
 import { useQuery } from "react-query";
 
-import { useAppData } from "./appData";
-import Spinner from "../components/spinner";
+import { useSearchData } from "./searchData";
+import { Spinner } from "../components/Spinner";
 import { ENDPOINTS } from "../lib/endpoints";
+import { getResponseBody } from "../lib/helpers";
 import { QUERIES } from "../lib/queries";
 
 const ResultsContext = createContext<TResultsContext>({
-  results: null,
+  results: {
+    items: [],
+    pages: [],
+  },
   handlePageChange: () => void 0,
   refetch: () => void 0,
 });
@@ -21,7 +25,7 @@ export function useResults(): TResultsContext {
 }
 
 export function ResultsProvider({ children }): JSX.Element {
-  const { searchInput, setSearchInput } = useAppData();
+  const { searchInput, setSearchInput } = useSearchData();
   const router = useRouter();
   const { isLoading, data, error, refetch } = useQuery<TSearchResults, Error>(
     QUERIES.SEARCH,
@@ -33,7 +37,7 @@ export function ResultsProvider({ children }): JSX.Element {
             Accept: "application/json",
           },
         },
-      ).then((res) => res.json()),
+      ).then((response) => getResponseBody(response)),
     {
       refetchOnWindowFocus: false,
     },
@@ -56,6 +60,9 @@ export function ResultsProvider({ children }): JSX.Element {
     page: number,
   ): void => {
     const dataPage = data.pages.find((p) => p.number === page);
+
+    if (!dataPage) return;
+
     router.push(dataPage.link).then(() => {
       setSearchInput({
         ...searchInput,
