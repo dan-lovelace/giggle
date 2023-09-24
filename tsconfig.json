@@ -22,7 +22,5 @@
       "@giggle/db": ["packages/db"],
       "@giggle/types": ["packages/types"]
     }
-  },
-  "include": ["packages/app/next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  }
 }
