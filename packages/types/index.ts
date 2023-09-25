@@ -1,3 +1,8 @@
+export const apiTypeLabelMap: Record<TApiType, string> = {
+  DEFAULT: "Default",
+  SITE_RESTRICTED: "Site Restricted",
+};
+
 export type TApiType = "DEFAULT" | "SITE_RESTRICTED";
 
 export type TAppConfig = {

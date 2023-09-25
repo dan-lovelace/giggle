@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-import { DBTEngine, TApiType } from "@giggle/types";
+import { apiTypeLabelMap, DBTEngine, TApiType } from "@giggle/types";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import {
   Box,
@@ -14,8 +14,6 @@ import {
   Stack,
   Tooltip,
 } from "@mui/material";
-
-import { apiTypeLabelMap } from ".";
 
 type ApiTypeSelectProps = {
   formData: DBTEngine;
