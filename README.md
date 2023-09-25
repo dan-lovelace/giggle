@@ -87,7 +87,7 @@ From a terminal window, run the following commands:
 ```sh
 $ git clone https://github.com/dan-lovelace/giggle.git
 $ cd giggle
-$ yarn init
+$ yarn initialize
 ```
 
 <details>
@@ -110,7 +110,7 @@ $ yarn init
 3.  Initialize the project
 
     ```sh
-    yarn init
+    yarn initialize
     ```
 
     Initialization does a number of things behind the scenes to get your project
@@ -147,7 +147,7 @@ After following the [Getting started](#getting-started) steps, run the following
 command to start the development server:
 
 ```sh
-yarn workspace @giggle/app dev
+yarn dev
 ```
 
 **Note**: This will start a local instance _without_ API caching which may run
@@ -193,8 +193,8 @@ either of these commands:
 The following commands will build your project and start it:
 
 ```sh
-$ yarn workspace @giggle/app build
-$ yarn workspace @giggle/app start
+$ yarn build
+$ yarn start
 ```
 
 Read the Next.js
