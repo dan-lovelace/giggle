@@ -27,7 +27,7 @@ export function useEngines() {
         body: JSON.stringify(body),
       }),
     {
-      onSuccess(response) {
+      onSuccess({ identifier }) {
         queryClient
           .invalidateQueries({
             queryKey: [QUERIES.ENGINES],
@@ -40,7 +40,7 @@ export function useEngines() {
                */
               setSearchInput({
                 ...searchInput,
-                engine: response.identifier,
+                engine: identifier,
               });
             }
           });
@@ -65,14 +65,14 @@ export function useEngines() {
           })
           .then(() => {
             const { identifier } = response;
-            const newEngine = engines.data?.find(
+            const newIdentifier = engines.data?.find(
               (engine) => engine.identifier !== identifier,
             )?.identifier;
 
             if (
               searchInput.engine === identifier &&
               (engines.data?.length ?? 0) > 1 &&
-              newEngine
+              newIdentifier
             ) {
               /**
                * User deleted the selected engine and more exist. Update
@@ -80,7 +80,7 @@ export function useEngines() {
                */
               setSearchInput({
                 ...searchInput,
-                engine: newEngine,
+                engine: newIdentifier,
               });
             }
           });
@@ -93,15 +93,27 @@ export function useEngines() {
 
   const { mutate: update } = useMutation(
     (body: { identifier: DBTEngine["identifier"]; data: DBTEngine }) =>
-      request<DBTEngine>(ENDPOINTS.ENGINES, {
+      request<{ identifier: string; data: DBTEngine }>(ENDPOINTS.ENGINES, {
         method: "PUT",
         body: JSON.stringify(body),
       }),
     {
-      onSuccess() {
-        queryClient.invalidateQueries({
-          queryKey: [QUERIES.ENGINES],
-        });
+      onSuccess({ identifier, data }) {
+        queryClient
+          .invalidateQueries({
+            queryKey: [QUERIES.ENGINES],
+          })
+          .then(() => {
+            if (searchInput.engine === identifier) {
+              /**
+               * User updated the selected engine.
+               */
+              setSearchInput({
+                ...searchInput,
+                engine: data.identifier,
+              });
+            }
+          });
       },
       onError(error: string) {
         notify(error, { severity: "warning" });

@@ -81,14 +81,6 @@ export default function Search() {
     initialize();
   }, []);
 
-  useEffect(() => {
-    const { engine } = searchInput;
-
-    if (engine) {
-      localStorage.setItem(ENGINE, engine);
-    }
-  }, [searchInput.engine]);
-
   const handleEnginesClick = (event: React.MouseEvent<HTMLElement>) => {
     setEnginesEl(event.currentTarget);
   };

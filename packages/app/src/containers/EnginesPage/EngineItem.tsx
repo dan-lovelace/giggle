@@ -68,7 +68,7 @@ export default function Engine({ api_type, identifier, name }: DBTEngine) {
       { identifier, data: editedValues },
       {
         onSuccess(response) {
-          setEditedValues(response);
+          setEditedValues(response.data);
           setIsEditing(false);
         },
       },
