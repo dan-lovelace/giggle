@@ -103,6 +103,7 @@ export default function AddEngineButton() {
         </form>
       ) : (
         <Button
+          data-testid="add-engine-button"
           variant="contained"
           startIcon={<AddIcon />}
           onClick={handleCreateClick}

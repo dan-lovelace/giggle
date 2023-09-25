@@ -42,11 +42,13 @@ export default function Search() {
   const [enginesEl, setEnginesEl] = useState<null | HTMLElement>(null);
   const [initialized, setInitialized] = useState(false);
   const {
-    engines: { data },
+    engines: { data: engines },
   } = useEngines();
   const { searchInput, setSearchInput } = useSearchData();
   const enginesOpen = !!enginesEl;
-  const selectedEngine = data?.find((e) => e.identifier === searchInput.engine);
+  const selectedEngine = engines?.find(
+    (e) => e.identifier === searchInput.engine,
+  );
   const { refetch } = useResultsData();
   const router = useRouter();
 
@@ -60,8 +62,9 @@ export default function Search() {
           engine:
             locationQuery.get("engine") ||
             searchInput.engine ||
-            (data?.find((engine) => engine.identifier === storedEngine) &&
+            (engines?.find((engine) => engine.identifier === storedEngine) &&
               storedEngine) ||
+            (engines && engines.length > 0 && engines[0].identifier) ||
             initialSearchInput.engine,
           query: locationQuery.get("query") || initialSearchInput.query,
           page:
@@ -117,7 +120,7 @@ export default function Search() {
     });
   };
 
-  if (!data?.length) {
+  if (!engines?.length) {
     return false;
   }
 
@@ -183,7 +186,7 @@ export default function Search() {
               open={enginesOpen}
               onClose={handleEnginesClose}
             >
-              {data.map(({ identifier, name }) => (
+              {engines.map(({ identifier, name }) => (
                 <MenuItem
                   key={identifier}
                   value={identifier}
@@ -193,7 +196,7 @@ export default function Search() {
                   {name}
                 </MenuItem>
               ))}
-              {data.length > 0 && <Divider />}
+              {engines.length > 0 && <Divider />}
               <Link href={ROUTES.ENGINES}>
                 <MenuItem>
                   <ListItemIcon>

@@ -1,5 +1,5 @@
 export const ROUTES: Record<string, string> = Object.freeze({
   ENGINES: "/engines",
-  HOME: "/",
+  HOMEPAGE: "/",
   GOOGLE_PSE: "https://programmablesearchengine.google.com",
 });

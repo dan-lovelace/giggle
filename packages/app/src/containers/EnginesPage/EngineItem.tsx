@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 
-import { DBTEngine, TApiType } from "@giggle/types";
+import { apiTypeLabelMap, DBTEngine, TApiType } from "@giggle/types";
 import CheckIcon from "@mui/icons-material/Check";
 import ClearIcon from "@mui/icons-material/Clear";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -15,11 +15,10 @@ import {
   TextField,
 } from "@mui/material";
 
-import { apiTypeLabelMap } from ".";
 import ApiTypeSelect from "./ApiTypeSelect";
 import { useEngines } from "../../hooks";
 
-export default function Engine({ api_type, identifier, name }: DBTEngine) {
+export default function EngineItem({ api_type, identifier, name }: DBTEngine) {
   const [editedValues, setEditedValues] = useState<DBTEngine>({
     api_type,
     identifier,
@@ -76,7 +75,7 @@ export default function Engine({ api_type, identifier, name }: DBTEngine) {
   };
 
   return (
-    <form onSubmit={handleEditSave}>
+    <form data-testid="engine-item" onSubmit={handleEditSave}>
       <ListItem disableGutters>
         <Grid container item spacing={1} sx={{ alignItems: "center" }}>
           <Grid item xs>
@@ -123,6 +122,7 @@ export default function Engine({ api_type, identifier, name }: DBTEngine) {
             <Stack direction="row" spacing={1} sx={{ justifyContent: "end" }}>
               {isEditing ? (
                 <IconButton
+                  data-testid="save-engine-button"
                   key="saveEngine"
                   aria-label="save engine"
                   title="Save"
@@ -135,6 +135,7 @@ export default function Engine({ api_type, identifier, name }: DBTEngine) {
                 </IconButton>
               ) : (
                 <IconButton
+                  data-testid="edit-engine-button"
                   key="editEngine"
                   aria-label="edit engine"
                   title="Edit"
@@ -146,6 +147,7 @@ export default function Engine({ api_type, identifier, name }: DBTEngine) {
               {isConfirmingDelete ? (
                 <ClickAwayListener onClickAway={handleCancelConfirmDelete}>
                   <IconButton
+                    data-testid="confirm-delete-engine-button"
                     aria-label="confirm delete engine"
                     color="error"
                     title="Confirm delete"
@@ -157,6 +159,7 @@ export default function Engine({ api_type, identifier, name }: DBTEngine) {
               ) : (
                 <>
                   <IconButton
+                    data-testid="delete-engine-button"
                     aria-label="delete engine"
                     title="Delete"
                     onClick={handleDeleteClick}

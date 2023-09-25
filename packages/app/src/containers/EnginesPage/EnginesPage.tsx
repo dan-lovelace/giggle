@@ -40,7 +40,10 @@ export default function EnginesPage() {
           </Box>
         </Alert>
       ) : (
-        <Box sx={{ maxWidth: breakpoints.values.md }}>
+        <Box
+          data-testid="engines-list"
+          sx={{ maxWidth: breakpoints.values.md }}
+        >
           <List
             sx={{
               "& .MuiListItem-root:not(:last-child)": {

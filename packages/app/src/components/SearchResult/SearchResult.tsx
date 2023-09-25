@@ -2,7 +2,6 @@ import { TGoogleResult } from "@giggle/types";
 import { Box, Link, Stack, Typography } from "@mui/material";
 
 export default function SearchResult({
-  index,
   link,
   pagemap,
   snippet,
@@ -12,9 +11,9 @@ export default function SearchResult({
 
   return (
     <Stack
+      data-testid="search-result"
       direction="row"
       spacing={1}
-      data-testid={`search-result-${index}`}
       sx={{ mb: 2 }}
     >
       <Box
