@@ -13,12 +13,14 @@ import {
 import ApiTypeSelect from "./ApiTypeSelect";
 import { useEngines } from "../../hooks";
 
+const defaultFormData: DBTEngine = {
+  api_type: "DEFAULT",
+  identifier: "",
+  name: "",
+};
+
 export default function AddEngineButton() {
-  const [formData, setFormData] = useState<DBTEngine>({
-    api_type: "DEFAULT",
-    identifier: "",
-    name: "",
-  });
+  const [formData, setFormData] = useState<DBTEngine>(defaultFormData);
   const [isCreating, setIsCreating] = useState(false);
   const { insert } = useEngines();
 
@@ -42,6 +44,7 @@ export default function AddEngineButton() {
 
     insert(formData, {
       onSuccess() {
+        setFormData(defaultFormData);
         setIsCreating(false);
       },
     });
