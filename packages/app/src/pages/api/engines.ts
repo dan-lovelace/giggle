@@ -79,35 +79,31 @@ export default async function handler(
       case "DELETE": {
         const result = await remove(body.identifier);
 
-        response.status(200).send(result);
-        break;
+        return response.status(200).send(result);
       }
 
       case "GET": {
         const result = await get();
 
-        response.status(200).send(result);
-        break;
+        return response.status(200).send(result);
       }
 
       case "POST": {
         const data = validateEngine(body);
         const result = await insert(data);
 
-        response.status(200).send(result);
-        break;
+        return response.status(200).send(result);
       }
 
       case "PUT": {
         const data = validateEngine(body.data);
         const result = await update(body.identifier, data);
 
-        response.status(200).send(result);
-        break;
+        return response.status(200).send(result);
       }
 
       default:
-        response.status(405).end();
+        return response.status(405).end();
     }
   } catch (error) {
     if (error instanceof z.ZodError) {

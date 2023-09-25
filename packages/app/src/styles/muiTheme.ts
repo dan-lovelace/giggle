@@ -25,11 +25,4 @@ export const themeComponents: Components<Omit<Theme, "components">> = {
   MuiInputBase: {
     defaultProps: { autoComplete: "off" },
   },
-  MuiTab: {
-    styleOverrides: {
-      root: {
-        textTransform: "none",
-      },
-    },
-  },
 };

@@ -1,13 +1,10 @@
 {
   "name": "@giggle/app",
   "version": "1.0.0",
-  "description": "NextJS app",
-  "main": "src/pages/index.ts",
+  "description": "Next.js app",
   "scripts": {
-    "dev": "RESULTS_CACHE_LENGTH_SECONDS=0 next dev",
     "build": "next build",
-    "knex": "NODE_ENV=development knex --cwd db",
-    "lint": "eslint .",
+    "dev": "next dev",
     "start": "next start",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"

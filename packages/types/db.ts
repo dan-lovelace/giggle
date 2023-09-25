@@ -1,5 +1,5 @@
 /**
- * These types are mapped to match the database schema.
+ * Types that are designed to match the database schema.
  */
 
 import { TApiType } from ".";
