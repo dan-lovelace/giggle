@@ -24,5 +24,5 @@ echo "Creating database and running migrations"
 yarn workspace @giggle/db knex migrate:latest
 
 # # create .env with template
-echo "Creating empty ${yellow}.env${normal} file"
+echo "Creating empty ${yellow}.env${normal} file or appending to existing"
 echo "GOOGLE_API_KEY=" >> packages/app/.env
