@@ -9,7 +9,6 @@ import { NextApiResponse } from "next";
 
 import { config } from "../../lib/config";
 import { ENDPOINTS } from "../../lib/endpoints";
-import { getResponseBody } from "../../lib/helpers";
 import mock from "../../mocks/results-recipes.json";
 
 // these are the maximum values allowed by google
@@ -51,7 +50,7 @@ export default async function handler(
     const searchQuery = await fetch(
       `${endpoint}?${new URLSearchParams(searchParams)}`,
     );
-    json = await getResponseBody(searchQuery);
+    json = await searchQuery.json();
   }
 
   const {

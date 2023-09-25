@@ -8,32 +8,21 @@ const db = connection();
 const parser: z.ZodType<DBTEngine> = z.lazy(() =>
   z.object({
     api_type: z.union([z.literal("DEFAULT"), z.literal("SITE_RESTRICTED")]),
-    identifier: z.string(),
-    name: z.string(),
+    identifier: z.string().min(1),
+    name: z.string().min(1),
   }),
 );
 
 const returning = ["api_type", "identifier", "name"];
 
-function get() {
+function get(): Promise<Array<DBTEngine>> {
   return db("engine").select(returning);
 }
 
-function handleError(error: any, response: NextApiResponse) {
-  if (error instanceof z.ZodError) {
-    const {
-      errors: [firstError],
-    } = error;
-    const message = `${firstError.message}: ${firstError.code}`;
+async function insert(engine: DBTEngine): Promise<DBTEngine> {
+  const result = await db("engine").insert(engine).returning(returning);
 
-    return response.status(400).send({ error: message });
-  }
-
-  response.status(500).send({ error: error.code ?? error });
-}
-
-function insert(engine: DBTEngine) {
-  return db("engine").insert(engine).returning(returning);
+  return result[0];
 }
 
 async function remove(identifier: string) {
@@ -42,8 +31,16 @@ async function remove(identifier: string) {
   return { identifier };
 }
 
-function update(identifier: string, data: Partial<DBTEngine>) {
-  return db("engine").update(data).where({ identifier }).returning(returning);
+async function update(
+  identifier: string,
+  data: Partial<DBTEngine>,
+): Promise<DBTEngine> {
+  const result = await db("engine")
+    .update(data)
+    .where({ identifier })
+    .returning(returning);
+
+  return result[0];
 }
 
 function validateEngine(body: unknown) {
@@ -74,52 +71,51 @@ export default async function handler(
     body = deepTrim(parsed);
   }
 
-  switch (method) {
-    case "DELETE": {
-      try {
+  try {
+    switch (method) {
+      case "DELETE": {
         const result = await remove(body.identifier);
-        response.status(200).send(result);
-      } catch (error) {
-        handleError(error, response);
-      }
-      break;
-    }
 
-    case "GET": {
-      try {
+        response.status(200).send(result);
+        break;
+      }
+
+      case "GET": {
         const result = await get();
-        response.status(200).send(result);
-      } catch (error) {
-        handleError(error, response);
-      }
-      break;
-    }
 
-    case "POST": {
-      try {
+        response.status(200).send(result);
+        break;
+      }
+
+      case "POST": {
         const data = validateEngine(body);
         const result = await insert(data);
 
         response.status(200).send(result);
-      } catch (error) {
-        handleError(error, response);
+        break;
       }
-      break;
-    }
 
-    case "PUT": {
-      try {
+      case "PUT": {
         const data = validateEngine(body.data);
         const result = await update(body.identifier, data);
 
         response.status(200).send(result);
-      } catch (error) {
-        handleError(error, response);
+        break;
       }
-      break;
+
+      default:
+        response.status(405).end();
+    }
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      const {
+        errors: [firstError],
+      } = error;
+      const message = `${firstError.message}: ${firstError.code}`;
+
+      return response.status(400).send({ error: message });
     }
 
-    default:
-      response.status(405).end();
+    response.status(500).send({ error: error.code ?? error.message ?? error });
   }
 }

@@ -1,43 +1,49 @@
 import { createContext, useContext, useEffect } from "react";
 
-import { TResultsContext, TSearchResults } from "@giggle/types";
+import { TSearchResults } from "@giggle/types";
 import { Alert } from "@mui/material";
 import { useRouter } from "next/router";
 import { useQuery } from "react-query";
 
 import { useSearchData } from "./searchData";
 import { Spinner } from "../components/Spinner";
+import { request } from "../hooks";
 import { ENDPOINTS } from "../lib/endpoints";
-import { getResponseBody } from "../lib/helpers";
 import { QUERIES } from "../lib/queries";
+
+type TResultsContext = {
+  results: TSearchResults;
+  handlePageChange(event: React.ChangeEvent<unknown>, page: number): void;
+  refetch(): void;
+};
 
 const ResultsContext = createContext<TResultsContext>({
   results: {
     items: [],
     pages: [],
   },
-  handlePageChange: () => void 0,
-  refetch: () => void 0,
+  handlePageChange: () => undefined,
+  refetch: () => undefined,
 });
 
-export function useResults(): TResultsContext {
+export function useResultsData() {
   return useContext(ResultsContext);
 }
 
-export function ResultsProvider({ children }): JSX.Element {
+export function ResultsProvider({ children }) {
   const { searchInput, setSearchInput } = useSearchData();
   const router = useRouter();
   const { isLoading, data, error, refetch } = useQuery<TSearchResults, Error>(
     QUERIES.SEARCH,
     () =>
-      fetch(
+      request<TSearchResults>(
         `${ENDPOINTS.SEARCH}?${new URLSearchParams(window.location.search)}`,
         {
           headers: {
             Accept: "application/json",
           },
         },
-      ).then((response) => getResponseBody(response)),
+      ),
     {
       refetchOnWindowFocus: false,
     },
@@ -58,7 +64,7 @@ export function ResultsProvider({ children }): JSX.Element {
   const handlePageChange = (
     event: React.ChangeEvent<unknown>,
     page: number,
-  ): void => {
+  ) => {
     const dataPage = data.pages.find((p) => p.number === page);
 
     if (!dataPage) return;

@@ -78,7 +78,7 @@ export type TGoogleResult = {
   link: string;
   metatags: Array<Record<string, string>>;
   pagemap: {
-    cse_thumbnail: Array<{
+    cse_thumbnail?: Array<{
       height: string;
       src: string;
       width: string;
@@ -86,12 +86,6 @@ export type TGoogleResult = {
   };
   snippet: string;
   title: string;
-};
-
-export type TResultsContext = {
-  results: TSearchResults;
-  handlePageChange(event: React.ChangeEvent<unknown>, page: number): void;
-  refetch(): void;
 };
 
 export type TSearchDataContext = {

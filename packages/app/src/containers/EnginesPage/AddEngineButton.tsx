@@ -20,7 +20,7 @@ export default function AddEngineButton() {
     name: "",
   });
   const [isCreating, setIsCreating] = useState(false);
-  const { create } = useEngines();
+  const { insert } = useEngines();
 
   const handleApiTypeChange = (event: SelectChangeEvent) => {
     setFormData({
@@ -40,11 +40,9 @@ export default function AddEngineButton() {
   const handleCreateSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    create(formData, {
-      onSuccess(response) {
-        if (response.ok) {
-          setIsCreating(false);
-        }
+    insert(formData, {
+      onSuccess() {
+        setIsCreating(false);
       },
     });
   };

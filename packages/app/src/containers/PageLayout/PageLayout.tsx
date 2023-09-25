@@ -4,7 +4,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Link from "next/link";
 
 import { Search } from "../../components/Search";
-import { useSearchData } from "../../contexts/searchData";
+import { useSearchData } from "../../contexts";
 
 export const siteTitle = "Giggle";
 
