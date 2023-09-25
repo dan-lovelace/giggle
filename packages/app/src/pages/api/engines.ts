@@ -31,13 +31,19 @@ async function remove(identifier: string) {
   return { identifier };
 }
 
-async function update(identifier: string, data: DBTEngine): Promise<DBTEngine> {
+async function update(
+  identifier: string,
+  data: DBTEngine,
+): Promise<{ identifier: string; data: DBTEngine }> {
   const result = await db("engine")
     .update(data)
     .where({ identifier })
     .returning(returning);
 
-  return result[0];
+  return {
+    identifier,
+    data: result[0],
+  };
 }
 
 function validateEngine(body: unknown) {

@@ -1,8 +1,9 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 import { TSearchDataContext, TSearchInput } from "@giggle/types";
 
 import { initialSearchInput } from "../components/Search/Search";
+import { STORAGE_KEYS } from "../lib/storage";
 
 const SearchDataContext = createContext<TSearchDataContext>({
   searchInput: {
@@ -21,6 +22,14 @@ export function useSearchData(): TSearchDataContext {
 export function SearchDataProvider({ children }): JSX.Element {
   const [searchInput, setSearchInput] =
     useState<TSearchInput>(initialSearchInput);
+
+  useEffect(() => {
+    const { engine } = searchInput;
+
+    if (engine) {
+      localStorage.setItem(STORAGE_KEYS.ENGINE, engine);
+    }
+  }, [searchInput.engine]);
 
   const resetSearchInput = () => {
     setSearchInput({
