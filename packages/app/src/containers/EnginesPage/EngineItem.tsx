@@ -75,7 +75,11 @@ export default function EngineItem({ api_type, identifier, name }: DBTEngine) {
   };
 
   return (
-    <form data-testid="engine-item" onSubmit={handleEditSave}>
+    <form
+      data-testid="engine-item"
+      className="engine-item"
+      onSubmit={handleEditSave}
+    >
       <ListItem disableGutters>
         <Grid container item spacing={1} sx={{ alignItems: "center" }}>
           <Grid item xs>
