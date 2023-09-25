@@ -71,7 +71,10 @@ export default async function handler(
 
   while (itemsRemaining > 0) {
     const number = pages.length + 1;
-    const searchInputParams: Record<keyof TSearchInput, string> = {
+    const searchInputParams: Record<
+      keyof Omit<TSearchInput, "shouldRefetch">,
+      string
+    > = {
       engine,
       query,
       page: String(number),

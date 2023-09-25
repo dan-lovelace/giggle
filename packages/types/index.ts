@@ -103,6 +103,7 @@ export type TSearchInput = {
   engine?: string;
   page?: number;
   query?: string;
+  shouldRefetch?: boolean;
 };
 
 export type TSearchResults = Partial<TGoogleResponse> & {

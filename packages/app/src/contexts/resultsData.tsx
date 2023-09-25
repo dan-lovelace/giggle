@@ -50,8 +50,10 @@ export function ResultsProvider({ children }) {
   );
 
   useEffect(() => {
-    refetch();
-  }, [searchInput.page]);
+    if (searchInput.shouldRefetch) {
+      refetch();
+    }
+  }, [searchInput]);
 
   if (isLoading) return <Spinner />;
   if (error) return <Alert severity="error">{error.message}</Alert>;

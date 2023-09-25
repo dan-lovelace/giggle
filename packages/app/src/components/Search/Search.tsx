@@ -54,27 +54,27 @@ export default function Search() {
   const router = useRouter();
 
   useEffect(() => {
-    function initialize() {
-      const updateSearchInput = () => {
-        const locationQuery = new URLSearchParams(window.location.search);
-        const pageQuery = locationQuery.get("page");
-        const storedEngine = localStorage.getItem(ENGINE);
-        const currentInput: TSearchInput = {
-          engine:
-            locationQuery.get("engine") ||
-            searchInput.engine ||
-            (engines?.find((engine) => engine.identifier === storedEngine) &&
-              storedEngine) ||
-            (engines && engines.length > 0 && engines[0].identifier) ||
-            initialSearchInput.engine,
-          query: locationQuery.get("query") || initialSearchInput.query,
-          page:
-            (pageQuery && parseInt(pageQuery, 10)) || initialSearchInput.page,
-        };
-
-        setSearchInput(currentInput);
+    const updateSearchInput = () => {
+      const locationQuery = new URLSearchParams(window.location.search);
+      const pageQuery = locationQuery.get("page");
+      const storedEngine = localStorage.getItem(ENGINE);
+      const currentInput: TSearchInput = {
+        engine:
+          locationQuery.get("engine") ||
+          searchInput.engine ||
+          (engines?.find((engine) => engine.identifier === storedEngine) &&
+            storedEngine) ||
+          (engines && engines.length > 0 && engines[0].identifier) ||
+          initialSearchInput.engine,
+        query: locationQuery.get("query") || initialSearchInput.query,
+        page: (pageQuery && parseInt(pageQuery, 10)) || initialSearchInput.page,
+        shouldRefetch: true,
       };
 
+      setSearchInput(currentInput);
+    };
+
+    function initialize() {
       // create a route handler to update search input state on back/forward click
       router.events.on("routeChangeComplete", updateSearchInput);
 
@@ -83,6 +83,10 @@ export default function Search() {
     }
 
     initialize();
+
+    return () => {
+      router.events.off("routeChangeComplete", updateSearchInput);
+    };
   }, []);
 
   const handleEnginesClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -105,6 +109,7 @@ export default function Search() {
   }: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput({
       ...searchInput,
+      shouldRefetch: false,
       [name]: value,
     });
   };
@@ -113,9 +118,15 @@ export default function Search() {
     event.preventDefault();
     if (!formSchema.isValidSync(searchInput)) return;
 
+    const query: TSearchInput = {
+      engine: searchInput.engine,
+      query: searchInput.query,
+      page: 1,
+    };
+
     Router.push({
       pathname: "/results",
-      query: { ...searchInput, page: 1 } as TSearchInput,
+      query,
     }).then(() => {
       refetch();
     });
