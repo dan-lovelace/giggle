@@ -29,7 +29,7 @@ export default async function handler(
     throw new Error("Missing Google API key");
   }
 
-  const searchParams: Record<string, string> = {
+  const googleSearchParams: Record<string, string> = {
     key: googleApiKey,
     cx: engine,
     q: query,
@@ -41,16 +41,17 @@ export default async function handler(
     .select("api_type")
     .where({ identifier: engine })
     .first();
-  const endpoint = ENDPOINTS.GOOGLE_SEARCH[api_type];
 
-  let json: TGoogleResponse;
+  const googleSearchUrl = `${
+    ENDPOINTS.GOOGLE_SEARCH[api_type]
+  }?${new URLSearchParams(googleSearchParams)}`;
+  let googleResponse: TGoogleResponse;
+
   if (mockResults) {
-    json = JSON.parse(JSON.stringify(mock));
+    googleResponse = JSON.parse(JSON.stringify(mock));
   } else {
-    const searchQuery = await fetch(
-      `${endpoint}?${new URLSearchParams(searchParams)}`,
-    );
-    json = await searchQuery.json();
+    const searchQuery = await fetch(googleSearchUrl);
+    googleResponse = await searchQuery.json();
   }
 
   const {
@@ -59,7 +60,7 @@ export default async function handler(
       request: [metadata],
     },
     searchInformation,
-  } = json;
+  } = googleResponse;
 
   // construct list of pages
   let itemsRemaining =
@@ -70,13 +71,14 @@ export default async function handler(
 
   while (itemsRemaining > 0) {
     const number = pages.length + 1;
+    const searchInputParams: Record<keyof TSearchInput, string> = {
+      engine,
+      query,
+      page: String(number),
+    };
 
     pages.push({
-      link: `/results?${new URLSearchParams({
-        engine,
-        query,
-        page: String(number),
-      })}`,
+      link: `/results?${new URLSearchParams(searchInputParams)}`,
       number,
     });
 
