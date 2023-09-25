@@ -17,7 +17,13 @@ export default function SearchResult({
       data-testid={`search-result-${index}`}
       sx={{ mb: 2 }}
     >
-      <Box sx={{ width: "60px", "& img": { marginTop: 1, width: "100%" } }}>
+      <Box
+        sx={{
+          minWidth: "60px",
+          width: "60px",
+          "& img": { marginTop: 1, width: "100%" },
+        }}
+      >
         {thumbnail && <img src={thumbnail.src} alt="result thumbnail" />}
       </Box>
       <Box>
@@ -37,6 +43,7 @@ export default function SearchResult({
                 whiteSpace: "nowrap",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
+                maxWidth: "20rem",
               }}
             >
               {link}
