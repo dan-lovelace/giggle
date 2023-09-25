@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import { css } from "@emotion/react";
 import { TSearchInput } from "@giggle/types";
+import CheckIcon from "@mui/icons-material/Check";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import SettingsIcon from "@mui/icons-material/Settings";
+import ListIcon from "@mui/icons-material/List";
 import {
   Box,
   Button,
@@ -186,23 +187,28 @@ export default function Search() {
               open={enginesOpen}
               onClose={handleEnginesClose}
             >
-              {engines.map(({ identifier, name }) => (
-                <MenuItem
-                  key={identifier}
-                  value={identifier}
-                  onClick={handleEngineChange(identifier)}
-                  selected={selectedEngine?.identifier === identifier}
-                >
-                  {name}
-                </MenuItem>
-              ))}
+              {engines.map(({ identifier, name }) => {
+                const selected = selectedEngine?.identifier === identifier;
+
+                return (
+                  <MenuItem
+                    key={identifier}
+                    selected={selected}
+                    value={identifier}
+                    onClick={handleEngineChange(identifier)}
+                  >
+                    <ListItemIcon>{selected && <CheckIcon />}</ListItemIcon>
+                    <ListItemText>{name}</ListItemText>
+                  </MenuItem>
+                );
+              })}
               {engines.length > 0 && <Divider />}
-              <Link href={ROUTES.ENGINES}>
+              <Link href={ROUTES.ENGINES} onClick={handleEnginesClose}>
                 <MenuItem>
                   <ListItemIcon>
-                    <SettingsIcon />
+                    <ListIcon />
                   </ListItemIcon>
-                  <ListItemText>Manage engines</ListItemText>
+                  <ListItemText>Edit engines</ListItemText>
                 </MenuItem>
               </Link>
             </Menu>
