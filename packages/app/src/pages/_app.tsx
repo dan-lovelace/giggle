@@ -38,7 +38,8 @@ export default function App(appProps: AppProps) {
     () =>
       createTheme({
         palette: {
-          mode: prefersDarkMode ? "dark" : "light",
+          // enables dark mode preference
+          // mode: prefersDarkMode ? "dark" : "light",
         },
         components: themeComponents,
       }),
