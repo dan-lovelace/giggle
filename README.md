@@ -36,9 +36,9 @@ Engines in the
 [Google console](https://programmablesearchengine.google.com/controlpanel/all),
 you'll add them to Giggle using the engine manager.
 
-| 1. Google console                              |     | 2. Giggle engine manager                       |
-| ---------------------------------------------- | --- | ---------------------------------------------- |
-| ![giggle_results](./assets/giggle_results.png) | ➡️  | ![giggle_results](./assets/giggle_results.png) |
+| 1. Google console                        |     | 2. Giggle engine manager                       |
+| ---------------------------------------- | --- | ---------------------------------------------- |
+| ![CSE console](./assets/cse_console.jpg) | ➡️  | ![Engine manager](./assets/engine_manager.jpg) |
 
 Different engines may be selected when searching so you can easily switch
 between them. Giggle also offers the option to use the
@@ -50,13 +50,13 @@ Restricted API, you still get 100 searches per day for free.
 
 ## How it looks
 
-| Homepage                                       | Search results                                 |
-| ---------------------------------------------- | ---------------------------------------------- |
-| ![giggle_results](./assets/giggle_results.png) | ![giggle_results](./assets/giggle_results.png) |
+| Homepage                           | Search results                                 |
+| ---------------------------------- | ---------------------------------------------- |
+| ![Homepage](./assets/homepage.jpg) | ![Search results](./assets/search_results.jpg) |
 
-| Engine manager                                 | Engine selector                                |
-| ---------------------------------------------- | ---------------------------------------------- |
-| ![giggle_results](./assets/giggle_results.png) | ![giggle_results](./assets/giggle_results.png) |
+| Engine manager                                 | Engine selector                                  |
+| ---------------------------------------------- | ------------------------------------------------ |
+| ![Engine manager](./assets/engine_manager.jpg) | ![Engine selector](./assets/engine_selector.jpg) |
 
 # Getting started
 
@@ -77,9 +77,8 @@ are _super_ easy.
   [Google Cloud credentials page](https://console.cloud.google.com/apis/credentials).
 - At least one custom search engine configured in the Google account's
   [Programmable Search Engine console](https://programmablesearchengine.google.com/smart_sign_in) -
-  Your console should look something like this:
-
-![programmable_search_engine](./assets/cse_console.png)
+  Your console should look something like this:<br /><br />
+  ![CSE console](./assets/cse_console.jpg)
 
 ## Initialize project
 
