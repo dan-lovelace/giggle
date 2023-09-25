@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 import { DBTEngine, TApiType } from "@giggle/types";
 import CheckIcon from "@mui/icons-material/Check";
@@ -18,7 +18,6 @@ import {
 import { apiTypeLabelMap } from ".";
 import ApiTypeSelect from "./ApiTypeSelect";
 import { useEngines } from "../../hooks";
-import { getResponseBody } from "../../lib/helpers";
 
 export default function Engine({ api_type, identifier, name }: DBTEngine) {
   const [editedValues, setEditedValues] = useState<DBTEngine>({
@@ -62,111 +61,115 @@ export default function Engine({ api_type, identifier, name }: DBTEngine) {
     setIsEditing(true);
   };
 
-  const handleEditSaveClick = () => {
+  const handleEditSave = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     update(
       { identifier, data: editedValues },
       {
-        async onSuccess(response) {
-          if (response.ok) {
-            const body = await getResponseBody(response);
-
-            setEditedValues(body[0]);
-            setIsEditing(false);
-          }
+        onSuccess(response) {
+          setEditedValues(response);
+          setIsEditing(false);
         },
       },
     );
   };
 
   return (
-    <ListItem disableGutters>
-      <Grid container item spacing={1} sx={{ alignItems: "center" }}>
-        <Grid item xs>
-          {isEditing ? (
-            <TextField
-              name="name"
-              size="small"
-              value={editedValues.name}
-              variant="standard"
-              onChange={handleEditChange}
-              sx={{ mt: "4px" }}
-            />
-          ) : (
-            name
-          )}
-        </Grid>
-        <Grid item xs>
-          {isEditing ? (
-            <TextField
-              name="identifier"
-              size="small"
-              value={editedValues.identifier}
-              variant="standard"
-              onChange={handleEditChange}
-              sx={{ mt: "4px" }}
-            />
-          ) : (
-            identifier
-          )}
-        </Grid>
-        <Grid item xs>
-          {isEditing ? (
-            <ApiTypeSelect
-              formData={editedValues}
-              onChange={handleApiTypeChange}
-            />
-          ) : (
-            apiTypeLabelMap[api_type]
-          )}
-        </Grid>
-        <Grid item xs>
-          <Stack direction="row" spacing={1} sx={{ justifyContent: "end" }}>
+    <form onSubmit={handleEditSave}>
+      <ListItem disableGutters>
+        <Grid container item spacing={1} sx={{ alignItems: "center" }}>
+          <Grid item xs>
             {isEditing ? (
-              <IconButton
-                aria-label="edit engine"
-                title="Edit"
-                onClick={handleEditSaveClick}
-                sx={{
-                  color: "success.main",
-                }}
-              >
-                <CheckIcon />
-              </IconButton>
+              <TextField
+                name="name"
+                required
+                size="small"
+                value={editedValues.name}
+                variant="standard"
+                onChange={handleEditChange}
+                sx={{ mt: "4px" }}
+              />
             ) : (
-              <IconButton
-                aria-label="edit engine"
-                title="Edit"
-                onClick={handleEditClick}
-              >
-                <EditIcon />
-              </IconButton>
+              name
             )}
-            {isConfirmingDelete ? (
-              <ClickAwayListener onClickAway={handleCancelConfirmDelete}>
-                <IconButton
-                  aria-label="confirm delete engine"
-                  color="error"
-                  title="Confirm delete"
-                  onClick={handleConfirmDeleteClick}
-                >
-                  <DeleteIcon />
-                </IconButton>
-              </ClickAwayListener>
+          </Grid>
+          <Grid item xs>
+            {isEditing ? (
+              <TextField
+                name="identifier"
+                required
+                size="small"
+                value={editedValues.identifier}
+                variant="standard"
+                onChange={handleEditChange}
+                sx={{ mt: "4px" }}
+              />
             ) : (
-              <>
-                <IconButton
-                  aria-label="delete engine"
-                  title="Delete"
-                  onClick={handleDeleteClick}
-                  sx={{ visibility: isEditing ? "hidden" : "visible" }}
-                >
-                  <ClearIcon />
-                </IconButton>
-              </>
+              identifier
             )}
-          </Stack>
+          </Grid>
+          <Grid item xs>
+            {isEditing ? (
+              <ApiTypeSelect
+                formData={editedValues}
+                onChange={handleApiTypeChange}
+              />
+            ) : (
+              apiTypeLabelMap[api_type]
+            )}
+          </Grid>
+          <Grid item xs>
+            <Stack direction="row" spacing={1} sx={{ justifyContent: "end" }}>
+              {isEditing ? (
+                <IconButton
+                  key="saveEngine"
+                  aria-label="save engine"
+                  title="Save"
+                  type="submit"
+                  sx={{
+                    color: "success.main",
+                  }}
+                >
+                  <CheckIcon />
+                </IconButton>
+              ) : (
+                <IconButton
+                  key="editEngine"
+                  aria-label="edit engine"
+                  title="Edit"
+                  onClick={handleEditClick}
+                >
+                  <EditIcon />
+                </IconButton>
+              )}
+              {isConfirmingDelete ? (
+                <ClickAwayListener onClickAway={handleCancelConfirmDelete}>
+                  <IconButton
+                    aria-label="confirm delete engine"
+                    color="error"
+                    title="Confirm delete"
+                    onClick={handleConfirmDeleteClick}
+                  >
+                    <DeleteIcon />
+                  </IconButton>
+                </ClickAwayListener>
+              ) : (
+                <>
+                  <IconButton
+                    aria-label="delete engine"
+                    title="Delete"
+                    onClick={handleDeleteClick}
+                    sx={{ visibility: isEditing ? "hidden" : "visible" }}
+                  >
+                    <ClearIcon />
+                  </IconButton>
+                </>
+              )}
+            </Stack>
+          </Grid>
         </Grid>
-      </Grid>
-    </ListItem>
+      </ListItem>
+    </form>
   );
 }

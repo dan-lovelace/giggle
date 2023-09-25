@@ -8,9 +8,7 @@ export default function SearchResult({
   snippet,
   title,
 }: TGoogleResult) {
-  const {
-    cse_thumbnail: [thumbnail],
-  } = pagemap;
+  const thumbnail = pagemap.cse_thumbnail?.[0];
 
   return (
     <Stack

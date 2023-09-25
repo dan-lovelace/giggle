@@ -2,15 +2,14 @@ import { Box, Pagination, Typography, useTheme } from "@mui/material";
 
 import { SearchResult } from "../components/SearchResult";
 import { PageLayout } from "../containers/PageLayout";
-import { ResultsProvider, useResults } from "../contexts/resultsData";
-import { useSearchData } from "../contexts/searchData";
+import { ResultsProvider, useResultsData, useSearchData } from "../contexts";
 
 function ResultsList() {
-  const { searchInput } = useSearchData();
   const {
     results: { items, metadata, pages, searchInformation },
     handlePageChange,
-  } = useResults();
+  } = useResultsData();
+  const { searchInput } = useSearchData();
   const { breakpoints } = useTheme();
 
   return (
@@ -45,7 +44,7 @@ function ResultsList() {
   );
 }
 
-export default function Results() {
+export default function ResultsPage() {
   return (
     <ResultsProvider>
       <PageLayout>

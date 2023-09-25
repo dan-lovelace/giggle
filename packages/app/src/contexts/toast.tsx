@@ -4,13 +4,15 @@ import { Alert, AlertProps, Box, Link, Snackbar } from "@mui/material";
 
 type NotifyOptions = { severity: AlertProps["severity"] };
 
-type ToastContextState = {
+type TToastContext = {
   notify: (message: string, options?: NotifyOptions) => void;
 };
 
-const ToastContext = createContext({} as ToastContextState);
+const ToastContext = createContext<TToastContext>({
+  notify: () => undefined,
+});
 
-export function useToastContext() {
+export function useToast() {
   return useContext(ToastContext);
 }
 

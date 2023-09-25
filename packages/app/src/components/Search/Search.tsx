@@ -20,8 +20,7 @@ import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import * as yup from "yup";
 
-import { useResults } from "../../contexts/resultsData";
-import { useSearchData } from "../../contexts/searchData";
+import { useResultsData, useSearchData } from "../../contexts";
 import { useEngines } from "../../hooks";
 import { ROUTES } from "../../lib/routes";
 import { STORAGE_KEYS } from "../../lib/storage";
@@ -48,7 +47,7 @@ export default function Search() {
   const { searchInput, setSearchInput } = useSearchData();
   const enginesOpen = !!enginesEl;
   const selectedEngine = data?.find((e) => e.identifier === searchInput.engine);
-  const { refetch } = useResults();
+  const { refetch } = useResultsData();
   const router = useRouter();
 
   useEffect(() => {
@@ -87,10 +86,8 @@ export default function Search() {
 
     if (engine) {
       localStorage.setItem(ENGINE, engine);
-    } else {
-      localStorage.removeItem(ENGINE);
     }
-  }, [searchInput]);
+  }, [searchInput.engine]);
 
   const handleEnginesClick = (event: React.MouseEvent<HTMLElement>) => {
     setEnginesEl(event.currentTarget);
