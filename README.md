@@ -163,10 +163,11 @@ when searching instead of hitting the Google API.
 
 A number of environment variables are available to configure the application:
 
-| Variable                       | Type    | Description                      |
-| ------------------------------ | ------- | -------------------------------- |
-| `MOCK`                         | boolean | Whether mocking is enabled       |
-| `RESULTS_CACHE_LENGTH_SECONDS` | string  | How long to cache search results |
+| Variable                       | Type    | Default       | Description                              |
+| ------------------------------ | ------- | ------------- | ---------------------------------------- |
+| `MOCK`                         | boolean | `false`       | Whether search result mocking is enabled |
+| `NODE_ENV`                     | string  | `development` | The target environment                   |
+| `RESULTS_CACHE_LENGTH_SECONDS` | string  | `3600`        | How long to cache search results         |
 
 ### Databases
 
