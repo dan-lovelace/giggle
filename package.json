@@ -11,8 +11,11 @@
     "packages/*"
   ],
   "scripts": {
-    "init": "./scripts/init.sh",
-    "lint": "eslint ."
+    "initialize": "./scripts/init.sh",
+    "lint": "eslint .",
+    "build": "yarn workspace @giggle/app build",
+    "dev": "yarn workspace @giggle/app dev",
+    "start": "yarn workspace @giggle/app start"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.2",
