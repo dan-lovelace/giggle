@@ -46,7 +46,7 @@ export default function EnginesPage() {
         >
           <List
             sx={{
-              "& .MuiListItem-root:not(:last-child)": {
+              "& .engine-item:not(:last-child)": {
                 borderBottom: "1px solid",
                 borderColor: "divider",
               },
