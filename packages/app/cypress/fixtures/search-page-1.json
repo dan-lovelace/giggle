@@ -2,402 +2,511 @@
   "items": [
     {
       "kind": "customsearch#result",
-      "title": "Radarr does not search unless I test indexer first : r/radarr",
-      "htmlTitle": "Radarr does not <b>search</b> unless I <b>test</b> indexer first : r/radarr",
-      "link": "https://www.reddit.com/r/radarr/comments/gmj2v7/radarr_does_not_search_unless_i_test_indexer_first/",
-      "displayLink": "www.reddit.com",
-      "snippet": "May 19, 2020 ... My Radarr is acting weird lately. It doesn't want to do any manual searches unless I test my indexer (Hydra) first. I go to the movie, ...",
-      "htmlSnippet": "May 19, 2020 <b>...</b> My Radarr is acting weird lately. It doesn&#39;t want to do any manual <b>searches</b> unless I <b>test</b> my indexer (Hydra) first. I go to the movie,&nbsp;...",
-      "cacheId": "GPMtzMu0RRMJ",
-      "formattedUrl": "https://www.reddit.com/.../radarr_does_not_search_unless_i_test_indexer_ first/",
-      "htmlFormattedUrl": "https://www.reddit.com/.../radarr_does_not_<b>search</b>_unless_i_<b>test</b>_indexer_ first/",
+      "title": "Classic Deviled Eggs Recipe | Mary Nolan | Food Network",
+      "htmlTitle": "Classic Deviled <b>Eggs</b> Recipe | Mary Nolan | Food Network",
+      "link": "https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Crack egg shells and carefully peel under cool running water. Gently dry with paper towels. Slice the eggs in half lengthwise, removing yolks to a medium bowl, ...",
+      "htmlSnippet": "Crack <b>egg</b> shells and carefully peel under cool running water. Gently dry with paper towels. Slice the <b>eggs</b> in half lengthwise, removing yolks to a medium bowl,&nbsp;...",
+      "cacheId": "VLhzswX3aTQJ",
+      "formattedUrl": "https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/recipes/classic-deviled-<b>eggs</b>-recipe-1911032",
       "pagemap": {
         "cse_thumbnail": [
           {
-            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQPKHuiLTWl4Q4VwKSpN4mZLImWm2-9AxT5JLxU0GXHnoemKjjLjd3pjqfN",
-            "width": "172",
-            "height": "293"
+            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTWnCKPoDDLNBbFd_5R46EmjMa7hxmXO-G8HZneXRRs0eQcpPNK_iDpKDU",
+            "width": "259",
+            "height": "194"
           }
         ],
         "metatags": [
           {
-            "theme-color": "#000000",
-            "og:type": "website",
-            "apple-mobile-web-app-status-bar-style": "black",
-            "og:site_name": "reddit",
-            "twitter:site": "@reddit",
-            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
-            "apple-mobile-web-app-capable": "yes",
-            "og:title": "r/radarr - Radarr does not search unless I test indexer first",
-            "og:url": "https://www.reddit.com/r/radarr/comments/gmj2v7/radarr_does_not_search_unless_i_test_indexer_first/",
-            "msapplication-navbutton-color": "#000000",
-            "og:description": "5 votes and 3 comments so far on Reddit"
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/6/9/0/CI0103_Classic-Deviled-Eggs.jpg.rend.hgtvcom.616.462.suffix/1479929974560.jpeg",
+            "twitter:card": "summary",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Classic Deviled Eggs",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Get Classic Deviled Eggs Recipe from Food Network",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/01823911078",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_09; pnmh_38; pn_epoch:1649695136016",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "15ms",
+            "og:url": "https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//recipes/classic-deviled-eggs-recipe-1911032",
+            "be:messages": "268736"
           }
         ],
         "cse_image": [
           {
-            "src": "https://external-preview.redd.it/jfxi2nyLi_Qlp34jIfzqt021dg14TNrNIzqAHHWfTOA.jpg?auto=webp&s=b6d3feebc50d9527c4d282f0616dd7f2f2e4e212"
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/6/9/0/CI0103_Classic-Deviled-Eggs.jpg.rend.hgtvcom.616.462.suffix/1479929974560.jpeg"
           }
         ]
       }
     },
     {
       "kind": "customsearch#result",
-      "title": "[OC] Calculus-related Google search trends around the time of the ...",
-      "htmlTitle": "[OC] Calculus-related Google <b>search</b> trends around the time of the ...",
-      "link": "https://www.reddit.com/r/dataisbeautiful/comments/giirw1/oc_calculusrelated_google_search_trends_around/",
-      "displayLink": "www.reddit.com",
-      "snippet": "May 13, 2020 ... Even insofar that google can be used on the exam, these tests were designed with a strict time limit (45 mins) and were designed to be more ...",
-      "htmlSnippet": "May 13, 2020 <b>...</b> Even insofar that google can be used on the <b>exam</b>, these <b>tests</b> were designed with a strict time limit (45 mins) and were designed to be more&nbsp;...",
-      "formattedUrl": "https://www.reddit.com/.../oc_calculusrelated_google_search_trends_around/",
-      "htmlFormattedUrl": "https://www.reddit.com/.../oc_calculusrelated_google_<b>search</b>_trends_around/",
+      "title": "Lemon Caper Deviled Eggs Recipe | Katie Lee Biegel | Food Network",
+      "htmlTitle": "Lemon Caper Deviled <b>Eggs</b> Recipe | Katie Lee Biegel | Food Network",
+      "link": "https://www.foodnetwork.com/recipes/katie-lee/lemon-caper-deviled-eggs-12342896",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Reduce the heat to a low boil and cook for 10 minutes. Drain. When they are cool enough to handle, peel the eggs. Slice each egg in half lengthwise. Remove the ...",
+      "htmlSnippet": "Reduce the heat to a low boil and cook for 10 minutes. Drain. When they are cool enough to handle, peel the <b>eggs</b>. Slice each <b>egg</b> in half lengthwise. Remove the&nbsp;...",
+      "cacheId": "4gLBy69tH3gJ",
+      "formattedUrl": "https://www.foodnetwork.com/...lee/lemon-caper-deviled-eggs-12342896",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/...lee/lemon-caper-deviled-<b>eggs</b>-12342896",
       "pagemap": {
         "cse_thumbnail": [
           {
-            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSMNGyWmnyqHCQzIjljrrVmVF-qivGQDzfh_mTrK5FI5YFmH3eEKbfLTnuG",
-            "width": "277",
-            "height": "182"
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSboIJoFWKnyfUvC1PrU1oUD4OsIofZ_p4WUp83ijA7vq6uPqfo-yBInUA",
+            "width": "136",
+            "height": "102"
           }
         ],
         "metatags": [
           {
-            "og:image": "https://preview.redd.it/ac3eybkz0ey41.png?auto=webp&s=6bf00e74faef9ef2ebcca479605f5c8715e19592",
-            "theme-color": "#000000",
-            "og:type": "image",
-            "og:image:width": "987",
-            "og:site_name": "reddit",
-            "og:title": "r/dataisbeautiful - [OC] Calculus-related Google search trends around the time of the time of the 2020 AP Calculus Exam",
-            "og:image:height": "650",
-            "msapplication-navbutton-color": "#000000",
-            "og:description": "16,030 votes and 599 comments so far on Reddit",
-            "apple-mobile-web-app-status-bar-style": "black",
-            "twitter:site": "@reddit",
-            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
-            "apple-mobile-web-app-capable": "yes",
-            "og:url": "https://www.reddit.com/r/dataisbeautiful/comments/giirw1/oc_calculusrelated_google_search_trends_around/"
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/03/17/0/KC3008_katie-lee-biegel-lemon-caper-deviled-eggs-2_s4x3.jpg.rend.hgtvcom.616.462.suffix/1647534345737.jpeg",
+            "twitter:card": "summary",
+            "fb:app_id": "582148248497951",
+            "og:site_name": "Food Network",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "og:title": "Lemon Caper Deviled Eggs",
+            "tp:preferredruntimes": "Flash,HTML5",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "og:url": "https://www.foodnetwork.com/recipes/katie-lee/lemon-caper-deviled-eggs-12342896",
+            "og:description": "Get Lemon Caper Deviled Eggs Recipe from Food Network",
+            "tp:initialize": "false"
           }
         ],
         "cse_image": [
           {
-            "src": "https://preview.redd.it/ac3eybkz0ey41.png?auto=webp&s=6bf00e74faef9ef2ebcca479605f5c8715e19592"
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/03/17/0/KC3008_katie-lee-biegel-lemon-caper-deviled-eggs-2_s4x3.jpg.rend.hgtvcom.616.462.suffix/1647534345737.jpeg"
           }
         ]
       }
     },
     {
       "kind": "customsearch#result",
-      "title": "Sklearn - grid search using a single train/test split : r ...",
-      "htmlTitle": "Sklearn - grid <b>search</b> using a single train/<b>test</b> split : r ...",
-      "link": "https://www.reddit.com/r/learnmachinelearning/comments/ontw0u/sklearn_grid_search_using_a_single_traintest_split/",
-      "displayLink": "www.reddit.com",
-      "snippet": "Jul 20, 2021 ... Sklearn - grid search using a single train/test split. Hi everyone,. I am using sklearn to performa gridsearch through some hyperparameter ...",
-      "htmlSnippet": "Jul 20, 2021 <b>...</b> Sklearn - grid <b>search</b> using a single train/<b>test</b> split. Hi everyone,. I am using sklearn to performa gridsearch through some hyperparameter&nbsp;...",
-      "cacheId": "0CAnxLh0rxIJ",
-      "formattedUrl": "https://www.reddit.com/.../sklearn_grid_search_using_a_single_traintest_split /",
-      "htmlFormattedUrl": "https://www.reddit.com/.../sklearn_grid_<b>search</b>_using_a_single_train<b>test</b>_split /",
+      "title": "How Long Are Hard Boiled Eggs Good For? | Food Network Healthy ...",
+      "htmlTitle": "How Long Are Hard Boiled <b>Eggs</b> Good For? | Food Network Healthy ...",
+      "link": "https://www.foodnetwork.com/healthyeats/healthy-tips/2020/02/how-long-is-hard-boiled-egg-good-for",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Mar 1, 2022 ... Peeled hard-cooked eggs stored in the refrigerator should be consumed within 48 hours due to the moist egg white surface being exposed and the ...",
+      "htmlSnippet": "Mar 1, 2022 <b>...</b> Peeled hard-cooked <b>eggs</b> stored in the refrigerator should be consumed within 48 hours due to the moist <b>egg</b> white surface being exposed and the&nbsp;...",
+      "cacheId": "K82Nm3U9rWgJ",
+      "formattedUrl": "https://www.foodnetwork.com/.../how-long-is-hard-boiled-egg-good-for",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/.../how-long-is-hard-boiled-<b>egg</b>-good-for",
       "pagemap": {
         "cse_thumbnail": [
           {
-            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_a2kHW7cXhKDKzZjouRXVuQwS7DtEU2WyKMQvQDmWo5fpdbHOu5RiUHNJ",
-            "width": "158",
-            "height": "158"
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRXXK6CXmaxqN0ESC4llPm5tuR75JudDQAz4E3SNPUJiPCIVKXu9sVDdqF3",
+            "width": "259",
+            "height": "194"
           }
         ],
         "metatags": [
           {
-            "theme-color": "#000000",
-            "og:type": "website",
-            "apple-mobile-web-app-status-bar-style": "black",
-            "og:site_name": "reddit",
-            "twitter:site": "@reddit",
-            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
-            "apple-mobile-web-app-capable": "yes",
-            "og:title": "r/learnmachinelearning - Sklearn - grid search using a single train/test split",
-            "og:url": "https://www.reddit.com/r/learnmachinelearning/comments/ontw0u/sklearn_grid_search_using_a_single_traintest_split/",
-            "msapplication-navbutton-color": "#000000",
-            "og:description": "4 votes and 8 comments so far on Reddit"
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/02/21/he_hard-boiled-eggs-getty_s4x3.jpg.rend.hgtvcom.616.462.suffix/1582562922873.jpeg",
+            "twitter:card": "summary",
+            "og:type": "article",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "How Long Are Hard-Boiled Eggs Good For?",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "It all depends on how you store them.",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/healthyeats/healthy-tips/2020/02/how-long-is-hard-boiled-egg-good-for",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/489648068",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_08; pnmh_48; pn_epoch:1649692100397",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "19ms",
+            "og:url": "https://www.foodnetwork.com/healthyeats/healthy-tips/2020/02/how-long-is-hard-boiled-egg-good-for",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//healthyeats/healthy-tips/2020/02/how-long-is-hard-boiled-egg-good-for",
+            "be:messages": "256494"
           }
         ],
         "cse_image": [
           {
-            "src": "https://external-preview.redd.it/kUR_W3NN--wq9n9SGepZB_vYvUdEzVXaqo6ZiK-ydP8.jpg?auto=webp&s=8899845c2cef3d5cad8d77cea72b831d4b209b77"
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/02/21/he_hard-boiled-eggs-getty_s4x3.jpg.rend.hgtvcom.616.462.suffix/1582562922873.jpeg"
           }
         ]
       }
     },
     {
       "kind": "customsearch#result",
-      "title": "Nice processing speed test(Symbol Search) : r/mensa",
-      "htmlTitle": "Nice processing speed <b>test</b>(Symbol <b>Search</b>) : r/mensa",
-      "link": "https://www.reddit.com/r/mensa/comments/hkz6co/nice_processing_speed_testsymbol_search/",
-      "displayLink": "www.reddit.com",
-      "snippet": "Jul 4, 2020 ... Nice processing speed test(Symbol Search). This exact test is used in WAIS. It gives you 120 second to complete the test.",
-      "htmlSnippet": "Jul 4, 2020 <b>...</b> Nice processing speed <b>test</b>(Symbol <b>Search</b>). This exact <b>test</b> is used in WAIS. It gives you 120 second to complete the <b>test</b>.",
-      "cacheId": "cQFzqCCfzzcJ",
-      "formattedUrl": "https://www.reddit.com/r/.../nice_processing_speed_testsymbol_search/",
-      "htmlFormattedUrl": "https://www.reddit.com/r/.../nice_processing_speed_<b>tests</b>ymbol_<b>search</b>/",
-      "pagemap": {
-        "metatags": [
-          {
-            "theme-color": "#000000",
-            "og:type": "website",
-            "apple-mobile-web-app-status-bar-style": "black",
-            "og:site_name": "reddit",
-            "twitter:site": "@reddit",
-            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
-            "apple-mobile-web-app-capable": "yes",
-            "og:title": "r/mensa - Nice processing speed test(Symbol Search)",
-            "og:url": "https://www.reddit.com/r/mensa/comments/hkz6co/nice_processing_speed_testsymbol_search/",
-            "msapplication-navbutton-color": "#000000",
-            "og:description": "9 votes and 49 comments so far on Reddit"
-          }
-        ]
-      }
-    },
-    {
-      "kind": "customsearch#result",
-      "title": "GRE subject test registration: \"No test centers found based on your ...",
-      "htmlTitle": "GRE subject <b>test</b> registration: &quot;No <b>test</b> centers found based on your ...",
-      "link": "https://www.reddit.com/r/GRE/comments/6cvrmx/gre_subject_test_registration_no_test_centers/",
-      "displayLink": "www.reddit.com",
-      "snippet": "May 23, 2017 ... Change search criteria or enter a specific city location and try again. I tried a different location and still received the same error. For ...",
-      "htmlSnippet": "May 23, 2017 <b>...</b> Change <b>search</b> criteria or enter a specific city location and try again. I tried a different location and still received the same error. For&nbsp;...",
-      "cacheId": "77pPheWxN-sJ",
-      "formattedUrl": "https://www.reddit.com/r/.../gre_subject_test_registration_no_test_centers/",
-      "htmlFormattedUrl": "https://www.reddit.com/r/.../gre_subject_<b>test</b>_registration_no_<b>test</b>_centers/",
+      "title": "Eggs All Day | Trisha's Southern Kitchen | Food Network",
+      "htmlTitle": "<b>Eggs</b> All Day | Trisha&#39;s Southern Kitchen | Food Network",
+      "link": "https://www.foodnetwork.com/shows/trishas-southern-kitchen/episodes/eggs-all-day",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "They return with more eggs than they can handle, so they decide to make an egg-centric menu consisting of Avocado Toast with Creamy Soft Scrambled Eggs, ...",
+      "htmlSnippet": "They return with more <b>eggs</b> than they can handle, so they decide to make an <b>egg</b>-centric menu consisting of Avocado Toast with Creamy Soft Scrambled <b>Eggs</b>,&nbsp;...",
+      "cacheId": "gZTd62T8EV4J",
+      "formattedUrl": "https://www.foodnetwork.com/shows/trishas-southern.../eggs-all-day",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/shows/trishas-southern.../<b>eggs</b>-all-day",
       "pagemap": {
         "cse_thumbnail": [
           {
-            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSWMCxMc14lO1lUEMuWId1BeuRJ5wH0XFV0NmomT7Xcc5MiO-GPCDt9mQ",
-            "width": "108",
-            "height": "143"
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTcls64sB1aNioxdCHJZYqaKpWa9qI5tGbQDioiEecZIifw-Bh4saTfauE",
+            "width": "231",
+            "height": "174"
           }
         ],
         "metatags": [
           {
-            "theme-color": "#000000",
-            "og:type": "website",
-            "apple-mobile-web-app-status-bar-style": "black",
-            "og:site_name": "reddit",
-            "twitter:site": "@reddit",
-            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
-            "apple-mobile-web-app-capable": "yes",
-            "og:title": "r/GRE - GRE subject test registration: \"No test centers found based on your search criteria\"",
-            "og:url": "https://www.reddit.com/r/GRE/comments/6cvrmx/gre_subject_test_registration_no_test_centers/",
-            "msapplication-navbutton-color": "#000000",
-            "og:description": "5 votes and 7 comments so far on Reddit"
+            "msapplication-tilecolor": "#0fadc4",
+            "twitter:card": "summary",
+            "fb:app_id": "582148248497951",
+            "og:site_name": "Food Network",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "og:title": "Eggs All Day",
+            "tp:preferredruntimes": "Flash,HTML5",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "og:url": "https://www.foodnetwork.com/shows/trishas-southern-kitchen/episodes/eggs-all-day",
+            "og:description": "Trisha Yearwood's sister, Beth, is thinking about owning her own chicken coop, so the Yearwood sisters head to their friend's farm to learn the basics! They return with more eggs than they can handle, so they decide to make an egg-centric menu consisting of Avocado Toast with Creamy Soft Scrambled Eggs, Deviled Egg Salad Club Sandwiches, Sweet Potato Asparagus Hash with Fried Eggs, and Chocolate Souffles with Triple Raspberry Sauce.",
+            "tp:initialize": "false"
           }
         ],
         "cse_image": [
           {
-            "src": "https://preview.redd.it/7wknhfg8m3t81.jpg?auto=webp&s=ee77fd9f0788d61e42c17238f95cde916d9b72cc"
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/1/9/4/YW0909H_sweet-potato-and-asparagus-hash-with-fried-egg_s4x3.jpg.rend.hgtvcom.231.174.suffix/1484024438410.jpeg"
           }
         ]
       }
     },
     {
       "kind": "customsearch#result",
-      "title": "Indexers test successfully but when I search albums I get no ...",
-      "htmlTitle": "Indexers <b>test</b> successfully but when I <b>search</b> albums I get no ...",
-      "link": "https://www.reddit.com/r/Lidarr/comments/pe1zx3/indexers_test_successfully_but_when_i_search/",
-      "displayLink": "www.reddit.com",
-      "snippet": "Aug 29, 2021 ... Indexers test successfully but when I search albums I get no download results. Hello everyone. As the title states, I have my indexers set ...",
-      "htmlSnippet": "Aug 29, 2021 <b>...</b> Indexers <b>test</b> successfully but when I <b>search</b> albums I get no download results. Hello everyone. As the title states, I have my indexers set&nbsp;...",
-      "cacheId": "KGQ1kowufd0J",
-      "formattedUrl": "https://www.reddit.com/r/.../indexers_test_successfully_but_when_i_search/",
-      "htmlFormattedUrl": "https://www.reddit.com/r/.../indexers_<b>test</b>_successfully_but_when_i_<b>search</b>/",
-      "pagemap": {
-        "metatags": [
-          {
-            "theme-color": "#000000",
-            "og:type": "website",
-            "apple-mobile-web-app-status-bar-style": "black",
-            "og:site_name": "reddit",
-            "twitter:site": "@reddit",
-            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
-            "apple-mobile-web-app-capable": "yes",
-            "og:title": "r/Lidarr - Indexers test successfully but when I search albums I get no download results",
-            "og:url": "https://www.reddit.com/r/Lidarr/comments/pe1zx3/indexers_test_successfully_but_when_i_search/",
-            "msapplication-navbutton-color": "#000000",
-            "og:description": "1 vote and 3 comments so far on Reddit"
-          }
-        ]
-      }
-    },
-    {
-      "kind": "customsearch#result",
-      "title": "[OC] Google search interest in physics related terms on the day of ...",
-      "htmlTitle": "[OC] Google <b>search</b> interest in physics related terms on the day of ...",
-      "link": "https://www.reddit.com/r/dataisbeautiful/comments/gibraf/oc_google_search_interest_in_physics_related/",
-      "displayLink": "www.reddit.com",
-      "snippet": "May 12, 2020 ... Does everyone everywhere take this 'Physics AP' test at the same time or something? Do people not take tests on different days depending on ...",
-      "htmlSnippet": "May 12, 2020 <b>...</b> Does everyone everywhere take this &#39;Physics AP&#39; <b>test</b> at the same time or something? Do people not take <b>tests</b> on different days depending on&nbsp;...",
-      "formattedUrl": "https://www.reddit.com/r/.../oc_google_search_interest_in_physics_related/",
-      "htmlFormattedUrl": "https://www.reddit.com/r/.../oc_google_<b>search</b>_interest_in_physics_related/",
+      "title": "Deviled Eggs Recipe | Ree Drummond | Food Network",
+      "htmlTitle": "Deviled <b>Eggs</b> Recipe | Ree Drummond | Food Network",
+      "link": "https://www.foodnetwork.com/recipes/ree-drummond/deviled-eggs-recipe-2074740",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Peel the eggs, cut in half and scoop out the yolks into a medium bowl. Add the mayo, mustard, pickles, pickle juice, sugar, vinegar, hot sauce and salt and ...",
+      "htmlSnippet": "Peel the <b>eggs</b>, cut in half and scoop out the yolks into a medium bowl. Add the mayo, mustard, pickles, pickle juice, sugar, vinegar, hot sauce and salt and&nbsp;...",
+      "cacheId": "sL-oQZLc70IJ",
+      "formattedUrl": "https://www.foodnetwork.com/recipes/ree.../deviled-eggs-recipe-2074740",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/recipes/ree.../deviled-<b>eggs</b>-recipe-2074740",
       "pagemap": {
         "cse_thumbnail": [
           {
-            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQUjI9C66tXr_D6xh1iPb8Ybabj8pQRCjiclIwPz1OKfFP45ayVxNpkZxPo",
-            "width": "291",
-            "height": "173"
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTIdDp2naPdLfLIaV7Rdqj9sPZZAgWOiNBoo9lnxNJb1Yxwzp-Du6eBnJQ",
+            "width": "259",
+            "height": "194"
           }
         ],
         "metatags": [
           {
-            "og:image": "https://preview.redd.it/9hlqzcklacy41.png?auto=webp&s=71af8e874b669d7635f52971da2bce5bd2610d17",
-            "theme-color": "#000000",
-            "og:type": "image",
-            "og:image:width": "724",
-            "og:site_name": "reddit",
-            "og:title": "r/dataisbeautiful - [OC] Google search interest in physics related terms on the day of the Physics AP test",
-            "og:image:height": "430",
-            "msapplication-navbutton-color": "#000000",
-            "og:description": "25,070 votes and 653 comments so far on Reddit",
-            "apple-mobile-web-app-status-bar-style": "black",
-            "twitter:site": "@reddit",
-            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
-            "apple-mobile-web-app-capable": "yes",
-            "og:url": "https://www.reddit.com/r/dataisbeautiful/comments/gibraf/oc_google_search_interest_in_physics_related/"
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/6/19/1/WU0502H_deviled-eggs-recipe_s4x3.jpg.rend.hgtvcom.616.462.suffix/1519339496102.jpeg",
+            "twitter:card": "summary",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Deviled Eggs",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Get Deviled Eggs Recipe from Food Network",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/recipes/ree-drummond/deviled-eggs-recipe-2074740",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/01665266488",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_09; pnmh_24; pn_epoch:1649694248939",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "20ms",
+            "og:url": "https://www.foodnetwork.com/recipes/ree-drummond/deviled-eggs-recipe-2074740",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//recipes/ree-drummond/deviled-eggs-recipe-2074740",
+            "be:messages": "253490"
           }
         ],
         "cse_image": [
           {
-            "src": "https://preview.redd.it/9hlqzcklacy41.png?auto=webp&s=71af8e874b669d7635f52971da2bce5bd2610d17"
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/6/19/1/WU0502H_deviled-eggs-recipe_s4x3.jpg.rend.hgtvcom.616.462.suffix/1519339496102.jpeg"
           }
         ]
       }
     },
     {
       "kind": "customsearch#result",
-      "title": "No test centers found based on your search criteria. Change search ...",
-      "htmlTitle": "No <b>test</b> centers found based on your <b>search</b> criteria. Change <b>search</b> ...",
-      "link": "https://www.reddit.com/r/GRE/comments/c7h9d1/no_test_centers_found_based_on_your_search/",
-      "displayLink": "www.reddit.com",
-      "snippet": "Jun 30, 2019 ... I started looking at July 2nd around noon and I could not find this test location at all. There are two test centers in Ontario listed on the ...",
-      "htmlSnippet": "Jun 30, 2019 <b>...</b> I started looking at July 2nd around noon and I could not <b>find</b> this <b>test</b> location at all. There are two <b>test</b> centers in Ontario listed on the&nbsp;...",
-      "cacheId": "T_Qqn8nxfSAJ",
-      "formattedUrl": "https://www.reddit.com/r/.../no_test_centers_found_based_on_your_search/",
-      "htmlFormattedUrl": "https://www.reddit.com/r/.../no_<b>test</b>_centers_found_based_on_your_<b>search</b>/",
+      "title": "Is It Safe to Eat Eggs Every Day? | Food Network Healthy Eats ...",
+      "htmlTitle": "Is It Safe to Eat <b>Eggs</b> Every Day? | Food Network Healthy Eats ...",
+      "link": "https://www.foodnetwork.com/healthyeats/healthy-tips/is-it-safe-to-eat-eggs-every-day",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Apr 8, 2021 ... Healthy adults can eat up to one egg per day, according to the American Heart Association. Older people may be able to eat up to two eggs ...",
+      "htmlSnippet": "Apr 8, 2021 <b>...</b> Healthy adults can eat up to one <b>egg</b> per day, according to the American Heart Association. Older people may be able to eat up to two <b>eggs</b>&nbsp;...",
+      "cacheId": "tbuJQ_KrvqcJ",
+      "formattedUrl": "https://www.foodnetwork.com/healthyeats/.../is-it-safe-to-eat-eggs-every-day",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/healthyeats/.../is-it-safe-to-eat-<b>eggs</b>-every-day",
       "pagemap": {
         "cse_thumbnail": [
           {
-            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQejpwfsVD-c-mB8di10fxP_padwA7xXG9lfw02wu3Ew7KFPgfZOGJ4g4-H",
-            "width": "168",
-            "height": "300"
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRIAIftuaNShp129QtfZxJoWEbheWe2SUXQ6HEIU8dOKXkOrno37rB6ELtH",
+            "width": "259",
+            "height": "194"
           }
         ],
         "metatags": [
           {
-            "theme-color": "#000000",
-            "og:type": "website",
-            "apple-mobile-web-app-status-bar-style": "black",
-            "og:site_name": "reddit",
-            "twitter:site": "@reddit",
-            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
-            "apple-mobile-web-app-capable": "yes",
-            "og:title": "r/GRE - No test centers found based on your search criteria. Change search criteria or enter a specific city location and try again.",
-            "og:url": "https://www.reddit.com/r/GRE/comments/c7h9d1/no_test_centers_found_based_on_your_search/",
-            "msapplication-navbutton-color": "#000000",
-            "og:description": "5 votes and 6 comments so far on Reddit"
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/06/fn_hard-boiled-eggs-getty_s4x3.jpg.rend.hgtvcom.616.462.suffix/1617821606911.jpeg",
+            "twitter:card": "summary",
+            "og:type": "article",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Is It Safe to Eat Eggs Every Day?",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Like many good things, eggs should be consumed in moderation. Here's what that means.",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/healthyeats/healthy-tips/is-it-safe-to-eat-eggs-every-day",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/095124337",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_08; pnmh_50; pn_epoch:1649692238709",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "14ms",
+            "og:url": "https://www.foodnetwork.com/healthyeats/healthy-tips/is-it-safe-to-eat-eggs-every-day",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//healthyeats/healthy-tips/is-it-safe-to-eat-eggs-every-day",
+            "be:messages": "257819"
           }
         ],
         "cse_image": [
           {
-            "src": "https://preview.redd.it/db6jyuemmtr81.jpg?width=640&crop=smart&auto=webp&s=1dea2e77144625911c57c381ae173e3398061a8c"
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/06/fn_hard-boiled-eggs-getty_s4x3.jpg.rend.hgtvcom.616.462.suffix/1617821606911.jpeg"
           }
         ]
       }
     },
     {
       "kind": "customsearch#result",
-      "title": "Test Search Supremacy! : r/dankmemer",
-      "htmlTitle": "<b>Test Search</b> Supremacy! : r/dankmemer",
-      "link": "https://www.reddit.com/r/dankmemer/comments/tjce0d/test_search_supremacy/",
-      "displayLink": "www.reddit.com",
-      "snippet": "Mar 21, 2022 ... 51K subscribers in the dankmemer community. Dank Memer is a bot for Discord. | Global currency game with over 10m users, stealing, pets, ...",
-      "htmlSnippet": "Mar 21, 2022 <b>...</b> 51K subscribers in the dankmemer community. Dank Memer is a bot for Discord. | Global currency game with over 10m users, stealing, pets,&nbsp;...",
-      "cacheId": "buYoRNjbK_QJ",
-      "formattedUrl": "https://www.reddit.com/r/dankmemer/comments/.../test_search_supremacy/",
-      "htmlFormattedUrl": "https://www.reddit.com/r/dankmemer/comments/.../<b>test</b>_<b>search</b>_supremacy/",
+      "title": "Tips for Making Perfect Poached Eggs : Recipes and Cooking : Food ...",
+      "htmlTitle": "Tips for Making Perfect Poached <b>Eggs</b> : Recipes and Cooking : Food ...",
+      "link": "https://www.foodnetwork.com/recipes/articles/tips-for-making-perfect-poached-eggs",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Always use fresh eggs. If you can't see the difference between the \"thick\" white and the \"thin\" white, the yolks will probably break in the pan.",
+      "htmlSnippet": "Always use fresh <b>eggs</b>. If you can&#39;t see the difference between the &quot;thick&quot; white and the &quot;thin&quot; white, the yolks will probably break in the pan.",
+      "cacheId": "5zYXvN0N13kJ",
+      "formattedUrl": "https://www.foodnetwork.com/.../tips-for-making-perfect-poached-eggs",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/.../tips-for-making-perfect-poached-<b>eggs</b>",
       "pagemap": {
         "cse_thumbnail": [
           {
-            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkNp8Kt64t-2D690PBnwQfdTXS8oHVacBpppjHXq4I-Xu0T-_dldlKQUg",
-            "width": "188",
-            "height": "264"
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQAAkUbOBHD50hl9t975wiOO-qWzH8Zz6ax74jXaTZo-GGRD7prj93Cl46f",
+            "width": "259",
+            "height": "194"
           }
         ],
         "metatags": [
           {
-            "og:image": "https://preview.redd.it/z3o8avevsqo81.png?auto=webp&s=828ad9cc25e2f3b09f32a500e0c508fe7b5419e2",
-            "theme-color": "#000000",
-            "og:type": "image",
-            "og:image:width": "188",
-            "og:site_name": "reddit",
-            "og:title": "r/dankmemer - Test Search Supremacy!",
-            "og:image:height": "264",
-            "msapplication-navbutton-color": "#000000",
-            "og:description": "21 votes and 9 comments so far on Reddit",
-            "apple-mobile-web-app-status-bar-style": "black",
-            "twitter:site": "@reddit",
-            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
-            "apple-mobile-web-app-capable": "yes",
-            "og:url": "https://www.reddit.com/r/dankmemer/comments/tjce0d/test_search_supremacy/"
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/2/28/5/FNM_040112-Alton-Eggs-021_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371606254170.jpeg",
+            "twitter:card": "summary",
+            "og:type": "article",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Tips for Making Perfect Poached Eggs",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/recipes/articles/tips-for-making-perfect-poached-eggs",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/0375488460",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_09; pnmh_11; pn_epoch:1649693480572",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "30ms",
+            "og:url": "https://www.foodnetwork.com/recipes/articles/tips-for-making-perfect-poached-eggs",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//recipes/articles/tips-for-making-perfect-poached-eggs",
+            "be:messages": "261176"
           }
         ],
         "cse_image": [
           {
-            "src": "https://preview.redd.it/z3o8avevsqo81.png?auto=webp&s=828ad9cc25e2f3b09f32a500e0c508fe7b5419e2"
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/2/28/5/FNM_040112-Alton-Eggs-021_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371606254170.jpeg"
           }
         ]
       }
     },
     {
       "kind": "customsearch#result",
-      "title": "New AFOQT score lookup URL/link - Air Force Officer Qualifying ...",
-      "htmlTitle": "New AFOQT score <b>lookup</b> URL/link - Air Force Officer Qualifying ...",
-      "link": "https://www.reddit.com/r/AFROTC/comments/m15u0v/new_afoqt_score_lookup_urllink_air_force_officer/",
-      "displayLink": "www.reddit.com",
-      "snippet": "Mar 9, 2021 ... ... lookup URL/link - Air Force Officer Qualifying Test Result Search ... link on the old page so you know... people could actually find it.",
-      "htmlSnippet": "Mar 9, 2021 <b>...</b> ... <b>lookup</b> URL/link - Air Force Officer Qualifying <b>Test</b> Result <b>Search</b> ... link on the old page so you know... people could actually <b>find</b> it.",
-      "cacheId": "bhiCKfft-pkJ",
-      "formattedUrl": "https://www.reddit.com/.../new_afoqt_score_lookup_urllink_air_force_ officer/",
-      "htmlFormattedUrl": "https://www.reddit.com/.../new_afoqt_score_<b>lookup</b>_urllink_air_force_ officer/",
+      "title": "The Difference Between Eggs: Pasture-Raised, Caged, Cage-Free ...",
+      "htmlTitle": "The Difference Between <b>Eggs</b>: Pasture-Raised, Caged, Cage-Free ...",
+      "link": "https://www.foodnetwork.com/healthyeats/healthy-tips/2019/08/pasture-raised-eggs",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "The egg aisle isn't what it used to be. What was once a decision between white or brown eggs has become a time-consuming task full of labels and industry ...",
+      "htmlSnippet": "The <b>egg</b> aisle isn&#39;t what it used to be. What was once a decision between white or brown <b>eggs</b> has become a time-consuming task full of labels and industry&nbsp;...",
+      "cacheId": "tfOcE_zden8J",
+      "formattedUrl": "https://www.foodnetwork.com/healthyeats/healthy-tips/.../pasture-raised-eggs",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/healthyeats/healthy-tips/.../pasture-raised-<b>eggs</b>",
       "pagemap": {
         "cse_thumbnail": [
           {
-            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQJ1N6nZKzdTb80iqnzdZwdZPuHcWjZ5Z9A4VsyTp-9P8wU4nTzx6FfQZJC",
-            "width": "194",
-            "height": "260"
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcScCS4JezfFFLFkNokkvC9H5Qb8vdebLq9nLV8pUV5yyKAbMXEf-EQWeEE",
+            "width": "259",
+            "height": "194"
           }
         ],
         "metatags": [
           {
-            "theme-color": "#000000",
-            "og:type": "website",
-            "apple-mobile-web-app-status-bar-style": "black",
-            "og:site_name": "reddit",
-            "twitter:site": "@reddit",
-            "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
-            "apple-mobile-web-app-capable": "yes",
-            "og:title": "r/AFROTC - New AFOQT score lookup URL/link - Air Force Officer Qualifying Test Result Search Database",
-            "og:url": "https://www.reddit.com/r/AFROTC/comments/m15u0v/new_afoqt_score_lookup_urllink_air_force_officer/",
-            "msapplication-navbutton-color": "#000000",
-            "og:description": "56 votes and 20 comments so far on Reddit"
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/8/7/0/RX_Vital-Farms-Pasterized-Eggs.jpg.rend.hgtvcom.616.462.suffix/1565201195045.jpeg",
+            "twitter:card": "summary",
+            "og:type": "article",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "What Are Pasture-Raised Eggs?",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Our expert breaks down all the labels you'll find on an egg carton these days.",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/healthyeats/healthy-tips/2019/08/pasture-raised-eggs",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/113247184",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_08; pnmh_48; pn_epoch:1649692127338",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "15ms",
+            "og:url": "https://www.foodnetwork.com/healthyeats/healthy-tips/2019/08/pasture-raised-eggs",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//healthyeats/healthy-tips/2019/08/pasture-raised-eggs",
+            "be:messages": "107798"
           }
         ],
         "cse_image": [
           {
-            "src": "https://preview.redd.it/zzcdx07qirs81.png?width=640&crop=smart&auto=webp&s=2083c624c966ab26f71c84bd3c27af4b18ec10cc"
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/8/7/0/RX_Vital-Farms-Pasterized-Eggs.jpg.rend.hgtvcom.616.462.suffix/1565201195045.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Crispy Easter Eggs Recipe | Ree Drummond | Food Network",
+      "htmlTitle": "Crispy Easter <b>Eggs</b> Recipe | Ree Drummond | Food Network",
+      "link": "https://www.foodnetwork.com/recipes/ree-drummond/crispy-easter-eggs-2744152",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Directions. Special equipment: plastic Easter egg molds and a clean egg crate. In a large saucepan, melt ...",
+      "htmlSnippet": "Directions. Special equipment: plastic Easter <b>egg</b> molds and a clean <b>egg</b> crate. In a large saucepan, melt&nbsp;...",
+      "cacheId": "yKPm7uyF6E4J",
+      "formattedUrl": "https://www.foodnetwork.com/recipes/ree.../crispy-easter-eggs-2744152",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/recipes/ree.../crispy-easter-<b>eggs</b>-2744152",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQZY2potm_zCdvN10UbEQOZIo39RVrxpKmLm9wc6esLaMvn2iUlZOKENVY",
+            "width": "259",
+            "height": "194"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/4/8/3/WU1002H_Crispy-Easter-Eggs_s4x3.jpg.rend.hgtvcom.616.462.suffix/1428524494314.jpeg",
+            "twitter:card": "summary",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Crispy Easter Eggs",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Get Crispy Easter Eggs Recipe from Food Network",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/recipes/ree-drummond/crispy-easter-eggs-2744152",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/1222272796",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_09; pnmh_31; pn_epoch:1649694700547",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "16ms",
+            "og:url": "https://www.foodnetwork.com/recipes/ree-drummond/crispy-easter-eggs-2744152",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//recipes/ree-drummond/crispy-easter-eggs-2744152",
+            "be:messages": "254277"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/4/8/3/WU1002H_Crispy-Easter-Eggs_s4x3.jpg.rend.hgtvcom.616.462.suffix/1428524494314.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Eggs Benedict Recipe | Ree Drummond | Food Network",
+      "htmlTitle": "<b>Eggs</b> Benedict Recipe | Ree Drummond | Food Network",
+      "link": "https://www.foodnetwork.com/recipes/ree-drummond/eggs-benedict-recipe-2107801",
+      "displayLink": "www.foodnetwork.com",
+      "snippet": "Add the egg yolks to a blender or a food processor. Add in the lemon juice and blend for several seconds. With the blender on, slowly drizzle in the melted ...",
+      "htmlSnippet": "Add the <b>egg</b> yolks to a blender or a food processor. Add in the lemon juice and blend for several seconds. With the blender on, slowly drizzle in the melted&nbsp;...",
+      "cacheId": "FTBiBaDA5C8J",
+      "formattedUrl": "https://www.foodnetwork.com/recipes/ree.../eggs-benedict-recipe-2107801",
+      "htmlFormattedUrl": "https://www.foodnetwork.com/recipes/ree.../<b>eggs</b>-benedict-recipe-2107801",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSs55_kq9cL5Q8vwuzPgk1AziemZNsv1fyV7BbnMxKE-TO8oZJsI-hYR5O5",
+            "width": "259",
+            "height": "194"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#0fadc4",
+            "og:image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/4/27/0/WU0211H_eggs-benedict_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382541321583.jpeg",
+            "twitter:card": "summary",
+            "og:site_name": "Food Network",
+            "be:sdk": "java_sdk_1.5.3",
+            "og:title": "Eggs Benedict",
+            "tp:baseurl": "//www.pdk.video.snidigital.com/5.8.7/pdk",
+            "msapplication-tileimage": "/etc/clientlibs/assets/images/food/mstile-144x144.png",
+            "tp:preferredformats": "m3u,mpeg4,flv,f4m",
+            "og:description": "Get Eggs Benedict Recipe from Food Network",
+            "fb:app_id": "582148248497951",
+            "be:norm_url": "https://www.foodnetwork.com/recipes/ree-drummond/eggs-benedict-recipe-2107801",
+            "be:capsule_url": "https://ixfd-api.bc0a.com/api/ixf/1.0.0/get_capsule/f00000000001425/181040908",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no",
+            "be:api_dt": "pny_2022; pnm_04; pnd_11; pnh_09; pnmh_35; pn_epoch:1649694925278",
+            "be:mod_dt": "pny_1969; pnm_12; pnd_31; pnh_16; pnmh_00; pn_epoch:0",
+            "tp:preferredruntimes": "Universal",
+            "be:timer": "18ms",
+            "og:url": "https://www.foodnetwork.com/recipes/ree-drummond/eggs-benedict-recipe-2107801",
+            "tp:initialize": "false",
+            "be:orig_url": "https://www.foodnetwork.com//recipes/ree-drummond/eggs-benedict-recipe-2107801",
+            "be:messages": "241684"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/4/27/0/WU0211H_eggs-benedict_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382541321583.jpeg"
           }
         ]
       }
     }
   ],
   "metadata": {
-    "title": "Google Custom Search - test search",
-    "totalResults": "9630000",
-    "searchTerms": "test search",
+    "title": "Google Custom Search - eggs",
+    "totalResults": "156000",
+    "searchTerms": "eggs",
     "count": 10,
     "startIndex": 1,
     "inputEncoding": "utf8",
@@ -446,5 +555,11 @@
       "link": "/results?engine=11111111111111111&query=test+search&page=10",
       "number": 10
     }
-  ]
+  ],
+  "searchInformation": {
+    "searchTime": 0.336572,
+    "formattedSearchTime": "0.34",
+    "totalResults": "55",
+    "formattedTotalResults": "156,000"
+  }
 }

@@ -19,6 +19,7 @@
     "@typescript-eslint/parser": "^6.7.2",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-import": "^2.28.1",
     "prettier": "^3.0.3"
   },
@@ -35,6 +36,7 @@
     "extends": [
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
+      "plugin:cypress/recommended",
       "prettier"
     ],
     "rules": {

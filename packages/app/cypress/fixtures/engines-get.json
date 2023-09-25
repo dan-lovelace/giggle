@@ -1,0 +1,15 @@
+[
+  {
+    "api_type": "DEFAULT",
+    "identifier": "11111111111111111",
+    "name": "Reddit"
+  },
+  {
+    "api_type": "DEFAULT",
+    "identifier": "22222222222222222",
+    "name": "Recipes"
+  },
+  { "api_type": "DEFAULT", "identifier": "33333333333333333", "name": "Games" },
+  { "api_type": "DEFAULT", "identifier": "44444444444444444", "name": "News" },
+  { "api_type": "DEFAULT", "identifier": "55555555555555555", "name": "Sports" }
+]
