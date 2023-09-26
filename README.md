@@ -11,12 +11,10 @@ A self-hosted, customizable and ad-free Google Search experience.
    - [What you'll need](#what-youll-need)
    - [Initialize project](#initialize-project)
    - [Add Developer API key](#add-developer-api-key)
-   - [Further reading](#further-reading)
-3. [Development](#development)
    - [Start server](#start-server)
-   - [Optional configuration](#optional-configuration)
-     - [Environment variables](#environment-variables)
-     - [Databases](#databases)
+3. [Development](#development)
+   - [Environment variables](#environment-variables)
+   - [Databases](#databases)
    - [Testing](#testing)
 4. [Building & deployment](#building--deployment)
 
@@ -123,7 +121,7 @@ $ yarn initialize
 
     </details>
 
-## Add Developer API key
+## Add API key
 
 The initilization script creates a `.env` file in your app package directory:
 [packages/app/.env](packages/app/.env). Copy your Developer API key and paste it
@@ -134,17 +132,10 @@ like this:
 GOOGLE_API_KEY=ABCdef123_gG-aBcDeF123aBcDeF123
 ```
 
-## Further reading
-
-- [Next.js docs](https://nextjs.org/docs) - Contains lots of good information
-  about configuration and deployment.
-
-# Development
-
 ## Start server
 
-After following the [Getting started](#getting-started) steps, run the following
-command to start the development server:
+Once your Google API key is in place, run the following command to start the
+development server:
 
 ```sh
 yarn dev
@@ -157,9 +148,20 @@ JSON API. There is a `MOCK=true` environment variable you may set in your
 [packages/app/.env](packages/app/.env) that will return mocked search results
 when searching instead of hitting the Google API.
 
-## Optional configuration
+# Development
 
-### Environment variables
+Giggle uses [Yarn workspaces](https://yarnpkg.com/features/workspaces) to manage
+dependencies. Individual packages are found in the `packages` directory and you
+can run commands against a specific one using its name like this:
+
+```sh
+yarn workspace @giggle/app add lodash
+```
+
+Check out the [Next.js documentation](https://nextjs.org/docs) for developing
+with Next.
+
+## Environment variables
 
 A number of environment variables are available to configure the application:
 
@@ -169,7 +171,7 @@ A number of environment variables are available to configure the application:
 | `NODE_ENV`                     | string  | `development` | The target environment                   |
 | `RESULTS_CACHE_LENGTH_SECONDS` | string  | `3600`        | How long to cache search results         |
 
-### Databases
+## Databases
 
 If you choose to deploy your application to a real server, you'll need to
 configure a database other than the one that was automatically created during
